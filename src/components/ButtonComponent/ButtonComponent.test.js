@@ -12,4 +12,14 @@ describe("Given an Button component", () => {
       expect(textElement).toHaveTextContent(buttonText);
     });
   });
+  describe("When it receives a click action'", () => {
+    test("Then it should invoke any given function", () => {
+      const clickAction = jest.fn();
+
+      render(<ButtonComponent action={clickAction}></ButtonComponent>);
+      const elementButtom = screen.getByRole("button");
+      userEvent.click(elementButtom);
+      expect(clickAction).toHaveBeenCalled();
+    });
+  });
 });
