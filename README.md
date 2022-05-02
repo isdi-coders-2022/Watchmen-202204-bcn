@@ -73,14 +73,15 @@ Modificaciones a esos datos:
 
 - Al se enviar este formulário, con una función se editará dentro de la API el objecto selecionado, donde los dados seran substituidos por los nuevos dados.
 
-
-
-
 # Lista de Componentes
 
 ## App Component
 
-Responsibilities:
+Estado:
+
+- A lo estado inicial el componente App renderiza el component Header y el Welcome page.
+
+Responsabilidade:
 
 - Crear el HTML del component App que renderize las paginas Home, Collections, Collection X, Collection Details, My Collections y sus sub elementos:
 
@@ -106,42 +107,80 @@ Responsibilities:
 
 ## Header Component
 
-Responsibilities:
+Estado:
+
+- A lo estado inicial el componente Header renderiza un logo y un menu de navigación.
+
+Responsabilidade:
 
 - Crear el HTML del component Header que renderize un Nav, un IMG y un UL con 4 LI's.
 
 ## Info Component
 
-Responsibilities:
+Estado:
+
+- A lo estado inicial el componente Info renderiza el titulo y un texto.
+
+Responsabilidade:
 
 - Crear el HTML del component Info que renderiza un element H2 y un element P.
 
 ## Button Component
 
-Responsibilities:
+Estado:
+
+- A lo estado inicial el componente Button renderiza el texto.
+
+Responsabilidade:
 
 - Crear el JSX del Component Button que renderiza un element button con un texto recibido.
 
 ## Icon Button Component
 
-Responsibilities:
+Estado:
+
+- A lo estado inicial el componente Icon Button renderiza un icon y una imagen.
+
+Responsabilidade:
 
 - Crear el HTML del Component Icon Button que renderiza un element icon.
 
 ## List Component
 
-Responsibilities:
+Estado:
+
+- A lo estado inicial el componente Icon Button renderiza un listado con un título, una imagen y una boton.
+
+Responsabilidade:
 
 - Crear el HTML del component List que renderize un UL, un LI, una IMG y un component BUTTON.
 
 ## Painting Component
 
-Responsibilities:
+Estado:
+
+- A lo estado inicial el componente Painting renderiza una imagen y un texto.
+
+Responsabilidade:
 
 - Crear el HTML del component Painting que renderize una IMG y un P.
 
 ## Form Component
 
-Responsibilities:
+Estado:
+
+- A lo estado inicial el componente Form renderiza un formulario.
+
+Responsabilidade:
 
 - Crear el HTML del Component Form que renderize un H3, text, un FORM, un LABEL y un INPUT.
+
+## Details Component
+
+Estado:
+
+- A lo estado inicial el componente Form renderiza un título, el año, el nombre del artista, y el detalle de la obra.
+
+Responsabilidade:
+
+- Crear el HTML del Component Details que renderize un H2, dos P, un H3, un UL, un LI y una IMG.
