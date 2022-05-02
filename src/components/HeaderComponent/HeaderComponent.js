@@ -78,8 +78,6 @@ const StyledHeaderComponent = styled.header`
   }
 
   @media (max-width: 700px) {
-    .top-nav {
-    }
     .menu-button-container {
       display: flex;
     }
