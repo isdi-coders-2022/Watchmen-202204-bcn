@@ -30,7 +30,11 @@ const IconButtonComponent = ({
       color={backgroundcolor}
       size={iconSize}
     >
-      <FontAwesomeIcon className={iconClassName} icon={iconName} />
+      <FontAwesomeIcon
+        data-testid="custom-element"
+        className={iconClassName}
+        icon={iconName}
+      />
     </StyledIconButtonComponent>
   );
 };
