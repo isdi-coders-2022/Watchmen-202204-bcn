@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Lista de Componentes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## App Component
 
-## Available Scripts
+Responsibilities:
 
-In the project directory, you can run:
+- Crear el HTML del component App que renderize las paginas Home, Collections, Collection X, Collection Details, My Collections y sus sub elementos:
 
-### `npm start`
+  Home
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - Image, Info Comp, Button Comp
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  Collections
 
-### `npm test`
+  - Info Comp, List Comp, Card Comp
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  Collection X
 
-### `npm run build`
+  - Info Comp > 2 Icon Buttons, List Comp > Card Comp > Button Comp
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  Collection Details
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - Details Comp
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  My Collections
 
-### `npm run eject`
+  - List Comp > Card Comp > Icon Button
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Header Component
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Responsibilities:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Crear el HTML del component Header que renderize un Nav, un IMG y un UL con 4 LI's.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Info Component
 
-## Learn More
+Responsibilities:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Crear el HTML del component Info que renderiza un element H2 y un element P.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Button Component
 
-### Code Splitting
+Responsibilities:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Crear el JSX del Component Button que renderiza un element button con un texto recibido.
 
-### Analyzing the Bundle Size
+## Icon Button Component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Responsibilities:
 
-### Making a Progressive Web App
+- Crear el HTML del Component Icon Button que renderiza un element icon.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## List Component
 
-### Advanced Configuration
+Responsibilities:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Crear el HTML del component List que renderize un UL, un LI, una IMG y un component BUTTON.
 
-### Deployment
+## Painting Component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Responsibilities:
 
-### `npm run build` fails to minify
+- Crear el HTML del component Painting que renderize una IMG y un P.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Form Component
+
+Responsibilities:
+
+- Crear el HTML del Component Form que renderize un H3, text, un FORM, un LABEL y un INPUT.
