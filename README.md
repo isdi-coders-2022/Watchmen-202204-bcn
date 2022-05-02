@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+## Capa de Datos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Collections:
 
-## Available Scripts
+- Datos reactivos:
 
-In the project directory, you can run:
+  - Nombre de las Colecciones: (basadas en el Fetch de la API por un, propriedad "principalOrFirstMaker")
+  - Descripción de la Coleccion: tendra un texto
+    que se alimentará de otro fetch, ahora pillando el ID de la primera obra del Fetch de la colección, y el texto utilizará el objeto "principalMakers",
+    y dentro de este las propriedades: "name","roles", "placeOfBirth", "dateOfBirth".
 
-### `npm start`
+- Modificaciones a esos datos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - Una funcion que recibirá estos datos y los cambiaran de acuerdo con el fetch pre-determinado.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Paintings:
 
-### `npm test`
+- Datos reactivos:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - Nombre para cada obra de arte (title) y su imagen (url)
 
-### `npm run build`
+- Modificaciones a esos datos:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - Una funcion que recibirá estos datos y los pintaran para cada componente Painting.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ### Details:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  Datos reactivos:
 
-### `npm run eject`
+  - Nombre para cada obra de arte (title), su año (presentingDate), el nombre del artista (principalMakers: name), la descripcion de la obra (plaqueDescriptionEnglish), su medio (physicalMedium), sus dimensiones (subTitle), su classificacion (objectTypes), su linea de credito (acquisition: creditLine) y su imagen (url)
+  - Un boton que "Add Item" que añade las painting en My Collection.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Modificaciones a esos datos:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - Una funcion que recibirá estos datos y los pintaran para cada componente Painting.
+  - Una función que lleve la painting selecionada por ID a nuestra API local.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  ### My Collection
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  Datos reactivos:
 
-## Learn More
+  - Borrar el iten por ID enviado a nuestra API local
+  - Abrir una página de formulário para editar cualquier uno de los itens de detalles de la obra (Nombre para cada obra de arte (title), su año (presentingDate), el nombre del artista (principalMakers: name), la descripcion de la obra (plaqueDescriptionEnglish), su medio (physicalMedium), sus dimensiones (subTitle), su classificacion (objectTypes), su linea de credito (acquisition: creditLine) y su imagen (url)).
+  - Un boton que renderize la pagina del Formulario para añadir una painting propria.
+  - Filtro por medio (physicalMedium), clasificacion (objectTypes) o año (presentingDate).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  Modificaciones a esos datos:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - Una funcion que borre del API el elemento selecionado
+  - Una funcion que renderize la pagina del Formulario para cambiar solo este objecto selecionado.
+  - Una funcion que renderize la pagina del Formulario para enviar una paiting customizada.
+  - Una funcion que organize y renderiza la pagina con los objetos de acuerdo con su filtro
 
-### Code Splitting
+  ### Upload your Art
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  Datos reactivos:
 
-### Analyzing the Bundle Size
+- Objeto que recibirá un input datos del usuário creando un objecto con estas informaciones:
+  obra (Nombre para cada obra de arte (title), su año (presentingDate), el nombre del artista (principalMakers: name), la descripcion de la obra (plaqueDescriptionEnglish), su medio (physicalMedium), sus dimensiones (subTitle), su classificacion (objectTypes), su linea de credito (acquisition: creditLine) y su imagen (url)).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Modificaciones a esos datos:
 
-### Making a Progressive Web App
+- Al se enviar este formulário, con uan función se creará dentro de la API el objecto, guardandolá a My Collections.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Edit your Art
 
-### Advanced Configuration
+Datos reactivos:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Editará un objecto selecionado que cambiará estos dados del objecto:
+  obra (Nombre para cada obra de arte (title), su año (presentingDate), el nombre del artista (principalMakers: name), la descripcion de la obra (plaqueDescriptionEnglish), su medio (physicalMedium), sus dimensiones (subTitle), su classificacion (objectTypes), su linea de credito (acquisition: creditLine) y su imagen (url)).
 
-### Deployment
+Modificaciones a esos datos:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Al se enviar este formulário, con una función se editará dentro de la API el objecto selecionado, donde los dados seran substituidos por los nuevos dados.
