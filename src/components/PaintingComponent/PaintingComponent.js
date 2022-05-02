@@ -43,13 +43,13 @@ const StyledPaintingComponent = styled.div`
   }
 `;
 
-const PaintingComponent = ({ text, image, description }) => {
+const PaintingComponent = ({ text, image, description, action }) => {
   return (
     <>
       <StyledPaintingComponent>
         <ul className="painting">
           <li className="painting_list">
-            <div className="painting_container">
+            <div className="painting_container" onClick={action}>
               <img className="painting_image" src={image} alt={description} />
               <p className="painting_text">{text}</p>
             </div>
