@@ -7,16 +7,8 @@ describe("Given a FormComponent component", () => {
       const nameLabel = "Title";
       render(<FormComponent />);
 
-      const textElement = screen.getByText(nameLabel);
-      expect(textElement).toBeInTheDocument(nameLabel);
-    });
-  });
-  describe("When its called to be rendered", () => {
-    test("Then it should create a FormComponent Component with a text inside 'Year'", () => {
-      const yearLabel = "Year";
-      render(<FormComponent />);
-      const expectedYearLabel = screen.getByText(yearLabel);
-      expect(expectedYearLabel.textContent).toEqual(yearLabel);
+      const textElement = screen.getByLabelText(nameLabel);
+      expect(textElement).toBeInTheDocument();
     });
   });
 });
