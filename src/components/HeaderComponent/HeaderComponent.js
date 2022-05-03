@@ -21,6 +21,8 @@ const StyledHeaderComponent = styled.header`
     list-style-type: none;
     margin: 0;
     padding: 0;
+    position: relative;
+    z-index: 50;
   }
 
   .menu > li {

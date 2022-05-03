@@ -9,7 +9,8 @@ describe("Given an Button component", () => {
 
       render(<ButtonComponent text={buttonText}></ButtonComponent>);
       const textElement = screen.getByRole("button");
-      expect(textElement).toHaveTextContent(buttonText);
+
+      expect(textElement).toBeInTheDocument();
     });
   });
   describe("When it receives a click action'", () => {
@@ -18,6 +19,7 @@ describe("Given an Button component", () => {
 
       render(<ButtonComponent action={clickAction}></ButtonComponent>);
       const elementButtom = screen.getByRole("button");
+
       userEvent.click(elementButtom);
       expect(clickAction).toHaveBeenCalled();
     });
