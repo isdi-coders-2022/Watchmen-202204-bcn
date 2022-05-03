@@ -22,12 +22,6 @@ const StyledHomePage = styled.div`
     }
   }
 
-  @media (max-width: 700px) {
-    .menu li {
-      filter: invert(100%);
-    }
-  }
-
   .button {
     position: relative;
     top: 500px;

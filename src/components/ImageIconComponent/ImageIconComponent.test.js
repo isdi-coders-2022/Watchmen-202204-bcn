@@ -6,7 +6,7 @@ describe("Given a InfoComponent component", () => {
     test("Then it should render the given text", () => {
       const titleText = "Add Item";
 
-      render(<ImageIconComponent heading1={titleText}></ImageIconComponent>);
+      render(<ImageIconComponent heading1={titleText} />);
       const textElement = screen.getByRole("heading", { name: titleText });
 
       expect(textElement).toBeInTheDocument();
