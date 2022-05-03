@@ -13,7 +13,7 @@ describe("Given a HomePage Component", () => {
     });
   });
   describe("When it's invoked with his given Button Component)", () => {
-    test("Then it should render a HomePage with onlu 1 Button element", () => {
+    test("Then it should render a HomePage with only 1 Button element", () => {
       render(<HomePage />);
 
       const expectedButtonElement = 1;
