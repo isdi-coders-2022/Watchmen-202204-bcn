@@ -127,7 +127,7 @@ const StyledHeaderComponent = styled.header`
 const HeaderComponent = () => {
   return (
     <StyledHeaderComponent>
-      <section className="top-nav">
+      <nav className="top-nav">
         <div className="top-nav_img">
           <img src="images/homepagelogo.svg" alt="WeekArtLogo" />
         </div>
@@ -141,7 +141,7 @@ const HeaderComponent = () => {
           <li>Collection 3</li>
           <li>My Collection</li>
         </ul>
-      </section>
+      </nav>
     </StyledHeaderComponent>
   );
 };
