@@ -152,7 +152,9 @@ const HeaderComponent = () => {
           <li>
             <NavLink to="/detail">Detail</NavLink>
           </li>
-          <li>My Collection</li>
+          <li>
+            <NavLink to="/mycollection">MyCollection</NavLink>
+          </li>
         </ul>
       </nav>
     </StyledHeaderComponent>
