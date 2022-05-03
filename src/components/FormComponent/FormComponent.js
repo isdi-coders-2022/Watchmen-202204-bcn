@@ -64,39 +64,47 @@ const FormComponent = ({
       <div className="formContainer">
         <img className="painting_image" src={image} alt={description} />
         <form className="form">
-          <label className="label" htmlFor={itemForm1}>
+          <label className="label" htmlFor="title">
             Title
           </label>
-          <input className="input" id={inputId} type={inputType}></input>
-          <label className="label" htmlFor={itemForm1}>
+          <input className="input" id="title" type="text"></input>
+
+          <label className="label" htmlFor="year">
             Year
           </label>
-          <input className="input" id={inputId} type={inputType}></input>
-          <label className="label" htmlFor={itemForm1}>
+          <input className="input" id="year" type="number"></input>
+
+          <label className="label" htmlFor="artist">
             Artist
           </label>
-          <input className="input" id={inputId} type={inputType}></input>
-          <label className="label" htmlFor={itemForm1}>
+          <input className="input" id="artist" type="text"></input>
+
+          <label className="label" htmlFor="link-image">
             Link Image
           </label>
-          <input className="input" id={inputId} type={inputType}></input>
+          <input className="input" id="link-image" type="text"></input>
+
           <h3>{heading2}</h3>
-          <label className="label" htmlFor={itemForm1}>
+
+          <label className="label" htmlFor="medium">
             Medium
           </label>
-          <input className="input" id={inputId} type={inputType}></input>
-          <label className="label" htmlFor={itemForm1}>
+          <input className="input" id="medium" type="text"></input>
+
+          <label className="label" htmlFor="classification">
             Classification
           </label>
-          <input className="input" id={inputId} type={inputType}></input>
-          <label className="label" htmlFor={itemForm1}>
+          <input className="input" id="classification" type="text"></input>
+
+          <label className="label" htmlFor="dimension">
             Dimensions
           </label>
-          <input className="input" id={inputId} type={inputType}></input>
-          <label className="label" htmlFor={itemForm1}>
+          <input className="input" id="dimension" type="text"></input>
+
+          <label className="label" htmlFor="credit-line">
             CreditLine
           </label>
-          <input className="input" id={inputId} type={inputType}></input>
+          <input className="input" id="credit-line" type="text"></input>
         </form>
       </div>
     </StyledFormComponent>
