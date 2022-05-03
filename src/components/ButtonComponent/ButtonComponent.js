@@ -20,7 +20,11 @@ const StyledButtonComponent = styled.button`
 
 const ButtonComponent = ({ backgroundcolor, text, action }) => {
   return (
-    <StyledButtonComponent backgroundcolor={backgroundcolor} onClick={action}>
+    <StyledButtonComponent
+      className="button"
+      backgroundcolor={backgroundcolor}
+      onClick={action}
+    >
       {text}
     </StyledButtonComponent>
   );

@@ -26,7 +26,18 @@ const StyledListComponent = styled.div`
     width: 345;
     text-align: center;
   }
+
+  .collection_image--overlay {
+    background: black;
+    overflow: hidden;
+    width: 338px;
+    height: 310px;
+    filter: drop-shadow(0px 6px 6px rgba(1, 0, 0, 8.45));
+    border-radius: 40px;
+  }
   .collection_image {
+    object-fit: cover;
+    opacity: 0.6;
     width: 338px;
     height: 310px;
     filter: drop-shadow(0px 6px 6px rgba(1, 0, 0, 8.45));
@@ -51,13 +62,15 @@ const ListComponent = ({ text, image, description }) => {
         <ul className="collection">
           <li className="collection_list">
             <div className="collection_container">
-              <img
-                className="collection_image"
-                src={
-                  "https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0"
-                }
-                alt={description}
-              />
+              <div className="collection_image--overlay">
+                <img
+                  className="collection_image"
+                  src={
+                    "https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0"
+                  }
+                  alt={description}
+                />
+              </div>
               <h3 className="collection_text">Collection 1</h3>
             </div>
           </li>
@@ -65,13 +78,15 @@ const ListComponent = ({ text, image, description }) => {
         <ul className="collection">
           <li className="collection_list">
             <div className="collection_container">
-              <img
-                className="collection_image"
-                src={
-                  "https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0"
-                }
-                alt={description}
-              />
+              <div className="collection_image--overlay">
+                <img
+                  className="collection_image"
+                  src={
+                    "https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0"
+                  }
+                  alt={description}
+                />
+              </div>
               <h3 className="collection_text">Collection 2</h3>
             </div>
           </li>
@@ -79,13 +94,15 @@ const ListComponent = ({ text, image, description }) => {
         <ul className="collection">
           <li className="collection_list">
             <div className="collection_container">
-              <img
-                className="collection_image"
-                src={
-                  "https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0"
-                }
-                alt={description}
-              />
+              <div className="collection_image--overlay">
+                <img
+                  className="collection_image"
+                  src={
+                    "https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0"
+                  }
+                  alt={description}
+                />
+              </div>
               <h3 className="collection_text">Collection 3</h3>
             </div>
           </li>

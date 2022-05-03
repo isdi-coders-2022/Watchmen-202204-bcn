@@ -1,11 +1,10 @@
 import "./App.css";
-import HeaderComponent from "./components/HeaderComponent/HeaderComponent";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <HeaderComponent />
-      <h1>WORK IN PROGRESS</h1>
+      <HomePage />
     </div>
   );
 }
