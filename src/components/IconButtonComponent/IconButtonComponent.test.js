@@ -12,13 +12,25 @@ describe("Given an IconButton component", () => {
         <IconButtonComponent
           iconName={faCirclePlus}
           action={clickAction}
-          divClassName="test"
         ></IconButtonComponent>
       );
-      const elementButton = screen.getByTestId("custom-element");
+      const elementIconButton = screen.getByTestId("custom-element");
 
-      userEvent.click(elementButton);
+      userEvent.click(elementIconButton);
       expect(clickAction).toHaveBeenCalled();
+    });
+  });
+  describe("When it receives a rendering instructions 'faCirclePlus''", () => {
+    test("Then it should render a button 'Circle Up' with'", () => {
+      const fontAwesomeRenderingInstruction = faCirclePlus;
+
+      render(
+        <IconButtonComponent
+          iconName={fontAwesomeRenderingInstruction}
+        ></IconButtonComponent>
+      );
+      const elementIconButton = screen.getByTestId("custom-element");
+      expect(elementIconButton).toBeTruthy();
     });
   });
 });
