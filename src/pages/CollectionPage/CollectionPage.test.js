@@ -1,16 +1,16 @@
 import { BrowserRouter } from "react-router-dom";
-import DetailPage from "./DetailPage";
+import CollectionPage from "./CollectionPage";
 const { render, screen } = require("@testing-library/react");
-describe("Given a DetailPage Component", () => {
+describe("Given a CollectionPage Component", () => {
   describe("When it's invoked with his given Header Component)", () => {
-    test("Then it should render a HomePage with 8 list elements", () => {
+    test("Then it should render a HomePage with 5 list elements", () => {
       render(
         <BrowserRouter>
-          <DetailPage />
+          <CollectionPage />
         </BrowserRouter>
       );
 
-      const expectedNumOfLi = 8;
+      const expectedNumOfLi = 5;
 
       const totalList = screen.getAllByRole("listitem");
 
