@@ -22,10 +22,18 @@ const StyledHomePage = styled.div`
     }
   }
 
+  @media (max-width: 700px) {
+    .menu li {
+      filter: invert(100%);
+    }
+  }
+
   .button {
     position: relative;
     top: 500px;
     z-index: 1;
+    word-wrap: break-word;
+    max-width: 100%;
   }
   .top-nav {
     filter: invert(100%);
