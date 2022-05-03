@@ -16,18 +16,23 @@ const StyledHomePage = styled.div`
   background-position: center center;
   height: 100vh;
 
-  .menu li {
-    filter: invert(100%);
+  @media (max-width: 700px) {
+    .menu li {
+      filter: invert(100%);
+    }
   }
 
   .button {
-    margin-top: 50%;
+    position: relative;
+    top: 500px;
+    z-index: 1;
   }
   .top-nav {
     filter: invert(100%);
   }
 
   .information {
+    position: absolute;
     padding: 1.3em;
   }
   .information_title {
