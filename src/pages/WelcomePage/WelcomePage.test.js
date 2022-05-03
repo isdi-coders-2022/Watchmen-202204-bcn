@@ -1,10 +1,15 @@
+import { BrowserRouter } from "react-router-dom";
 import Welcome from "./WelcomePage";
 const { render, screen } = require("@testing-library/react");
 
 describe("Given a HomePage Component", () => {
   describe("When it's invoked with his given Header and List Component)", () => {
     test("Then it should render a Welcome page with 4 list elements", () => {
-      render(<Welcome />);
+      render(
+        <BrowserRouter>
+          <Welcome />
+        </BrowserRouter>
+      );
 
       const expectedNumOfLi = 7;
 
@@ -15,7 +20,11 @@ describe("Given a HomePage Component", () => {
   });
   describe("When it's invoked with his given List Component)", () => {
     test("Then it should render a Welcome page with 4 headers", () => {
-      render(<Welcome />);
+      render(
+        <BrowserRouter>
+          <Welcome />
+        </BrowserRouter>
+      );
 
       const expectedNumberOfHeaders = 4;
 

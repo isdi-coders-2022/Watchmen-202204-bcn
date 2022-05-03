@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledHeaderComponent = styled.header`
@@ -8,6 +9,8 @@ const StyledHeaderComponent = styled.header`
     justify-content: space-between;
     height: 50px;
     padding: 1.2em;
+    position: relative;
+    z-index: 50;
   }
 
   .top-nav_img img {
@@ -131,16 +134,24 @@ const HeaderComponent = () => {
     <StyledHeaderComponent>
       <nav className="top-nav">
         <div className="top-nav_img">
-          <img src="images/homepagelogo.svg" alt="WeekArtLogo" />
+          <NavLink to="/home">
+            <img src="images/homepagelogo.svg" alt="WeekArtLogo" />
+          </NavLink>
         </div>
         <input id="menu-toggle" type="checkbox" htmlFor="menu-toggle" />
         <label className="menu-button-container" htmlFor="menu-toggle">
           <div className="menu-button"></div>
         </label>
         <ul className="menu">
-          <li>Collection 1</li>
-          <li>Collection 2</li>
-          <li>Collection 3</li>
+          <li>
+            <NavLink to="/welcome">Welcome Page</NavLink>
+          </li>
+          <li>
+            <NavLink to="/collection">Collection</NavLink>
+          </li>
+          <li>
+            <NavLink to="/detail">Detail</NavLink>
+          </li>
           <li>My Collection</li>
         </ul>
       </nav>
