@@ -24,7 +24,7 @@ const StyledHomePage = styled.div`
 
   .button {
     position: relative;
-    top: 500px;
+    top: 70%;
     z-index: 1;
     word-wrap: break-word;
     max-width: 100%;
