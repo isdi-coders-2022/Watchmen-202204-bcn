@@ -8,6 +8,8 @@ import MyCollectionPage from "./pages/MyCollectionPage/MyCollectionPage";
 import PaintsProvider from "./store/providers/paintsProvider";
 
 function App() {
+
+  
   return (
     <div className="App">
       <PaintsProvider>

@@ -78,7 +78,7 @@ const MyCollectionPage = (iconAction) => {
         <div className="image-container">
           <PaintingComponent
             text="Dynamic image text information (Working on it)"
-            image=" https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=w500 "
+            image="https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=w500 "
           />
           <div className="image-container-icons">
             <IconButtonComponent
