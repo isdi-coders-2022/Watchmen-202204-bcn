@@ -7,7 +7,7 @@ const DetailPage = () => {
     <>
       <HeaderComponent />
       <DetailComponent />
-      <ImageIconComponent />
+      <ImageIconComponent image="/images/background.jpeg" />
     </>
   );
 };

@@ -13,6 +13,7 @@ const StyledMyCollectionPage = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   .information {
     text-align: left;
     padding: 0 1.2em;
@@ -30,7 +31,7 @@ const StyledMyCollectionPage = styled.section`
     position: absolute;
     justify-content: space-around;
     width: 417.44px;
-    top: 13%;
+    top: 9%;
   }
 
   .prova {
@@ -50,6 +51,7 @@ const StyledMyCollectionPage = styled.section`
 
   .painting_container {
     margin: 0;
+    padding: 0;
   }
 
   .icon-container {
@@ -66,45 +68,71 @@ const StyledMyCollectionPage = styled.section`
 
 const MyCollectionPage = (iconAction) => {
   return (
-    <StyledMyCollectionPage>
+    <>
       <HeaderComponent />
-      <InfoComponent
-        titleText="MY COLLECTION"
-        paragraphText="Filter by presenting date"
-      />
-      <div className="image-container">
-        <PaintingComponent
-          text="Dynamic image text information (Working on it)"
-          image=" https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=w500 "
+      <StyledMyCollectionPage>
+        <InfoComponent
+          titleText="MY COLLECTION"
+          paragraphText="Filter by presenting date"
         />
-        <div className="image-container-icons">
-          <IconButtonComponent
-            divClassName="prova"
-            action={iconAction}
-            backgroundcolor="#fff"
-            iconSize="50px"
-            iconClassName="painting_icon"
-            iconName={faUserCircle}
+        <div className="image-container">
+          <PaintingComponent
+            text="Dynamic image text information (Working on it)"
+            image=" https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=w500 "
           />
+          <div className="image-container-icons">
+            <IconButtonComponent
+              divClassName="prova"
+              action={iconAction}
+              backgroundcolor="#fff"
+              iconSize="50px"
+              iconClassName="painting_icon"
+              iconName={faUserCircle}
+            />
+            <IconButtonComponent
+              divClassName="prova2"
+              action={iconAction}
+              backgroundcolor="#fff"
+              iconSize="50px"
+              iconClassName="painting_icon"
+              iconName={faCircleXmark}
+            />
+          </div>
+        </div>
+        <div className="image-container">
+          <PaintingComponent
+            text="Dynamic image text information (Working on it)"
+            image=" https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=w500 "
+          />
+          <div className="image-container-icons">
+            <IconButtonComponent
+              divClassName="prova"
+              action={iconAction}
+              backgroundcolor="#fff"
+              iconSize="50px"
+              iconClassName="painting_icon"
+              iconName={faUserCircle}
+            />
+            <IconButtonComponent
+              divClassName="prova2"
+              action={iconAction}
+              backgroundcolor="#fff"
+              iconSize="50px"
+              iconClassName="painting_icon"
+              iconName={faCircleXmark}
+            />
+          </div>
+        </div>
+        <div className="icon-container">
           <IconButtonComponent
-            divClassName="prova2"
-            action={iconAction}
             backgroundcolor="#fff"
             iconSize="50px"
-            iconClassName="painting_icon"
-            iconName={faCircleXmark}
+            iconClassName="marginIcon"
+            iconName={faCirclePlus}
           />
         </div>
-      </div>
-      <div className="icon-container">
-        <IconButtonComponent
-          backgroundcolor="#fff"
-          iconSize="50px"
-          iconClassName="marginIcon"
-          iconName={faCirclePlus}
-        />
-      </div>
-    </StyledMyCollectionPage>
+      </StyledMyCollectionPage>
+    </>
   );
 };
 

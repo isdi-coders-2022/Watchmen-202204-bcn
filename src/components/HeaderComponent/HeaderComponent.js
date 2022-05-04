@@ -32,6 +32,12 @@ const StyledHeaderComponent = styled.header`
     margin: 0 1rem;
   }
 
+  a {
+    text-decoration: none;
+    color: #000;
+    font-weight: lighter;
+  }
+
   .menu-button-container {
     display: none;
     height: 100%;
@@ -144,16 +150,16 @@ const HeaderComponent = () => {
         </label>
         <ul className="menu">
           <li>
-            <NavLink to="/welcome">Welcome Page</NavLink>
+            <NavLink to="/welcome">WELCOME PAGE</NavLink>
           </li>
           <li>
-            <NavLink to="/collection">Collection</NavLink>
+            <NavLink to="/collection">COLLECTION</NavLink>
           </li>
           <li>
-            <NavLink to="/detail">Detail</NavLink>
+            <NavLink to="/detail">DETAIL</NavLink>
           </li>
           <li>
-            <NavLink to="/mycollection">MyCollection</NavLink>
+            <NavLink to="/mycollection">MY COLLECTION</NavLink>
           </li>
         </ul>
       </nav>
