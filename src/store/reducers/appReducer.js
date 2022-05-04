@@ -1,22 +1,24 @@
-import {
-  paintingDataTestPage1,
-  paintingDataTestPage3,
-} from "../../dataTest/paintingData";
 import actionTypes from "../actions/AppActionsTypes";
 
 const appReducer = (currentState, action) => {
   let newState;
   switch (action.type) {
-    case actionTypes.nextPaintings:
+    case actionTypes.addPaintings:
       newState = {
         ...currentState,
-        painting: paintingDataTestPage3,
+        painting: "",
       };
       break;
-    case actionTypes.previousPaintings:
+    case actionTypes.deletePaintings:
       newState = {
         ...currentState,
-        painting: paintingDataTestPage1,
+        painting: "",
+      };
+      break;
+    case actionTypes.editPaintings:
+      newState = {
+        ...currentState,
+        painting: "",
       };
       break;
     default:
