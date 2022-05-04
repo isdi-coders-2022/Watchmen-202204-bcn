@@ -7,7 +7,6 @@ import {
   faSquareCaretRight,
 } from "@fortawesome/free-solid-svg-icons";
 import PaintingComponent from "../../components/PaintingComponent/PaintingComponent";
-import paintingData from "../../dataTest/paintingData";
 import { NavLink } from "react-router-dom";
 
 const StyledCollectionPage = styled.section`
