@@ -10,7 +10,7 @@ describe("Given a CollectionPage Component", () => {
         </BrowserRouter>
       );
 
-      const expectedNumOfLi = 7;
+      const expectedNumOfLi = 24;
 
       const totalList = screen.getAllByRole("listitem");
 

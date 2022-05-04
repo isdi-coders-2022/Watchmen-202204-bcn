@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { paintingDataTestPage2 } from "../../dataTest/paintingData";
+import paintingData from "../../dataTest/paintingData";
 
 const StyledPaintingComponent = styled.div`
   .painting {
@@ -51,19 +51,19 @@ const PaintingComponent = ({ action }) => {
     <>
       <StyledPaintingComponent>
         <ul className="painting">
-          {paintingDataTestPage2[0].artObjects.map((painting, index) => (
+          {paintingData[0].artObjects.map((painting, index) => (
             <li
               className="painting_list"
-              key={paintingDataTestPage2[0].artObjects[index].id}
+              key={paintingData[0].artObjects[index].id}
             >
               <div className="painting_container" onClick={action}>
                 <img
                   className="painting_image"
-                  src={paintingDataTestPage2[0].artObjects[index].webImage.url}
-                  alt={paintingDataTestPage2[0].artObjects[index].title}
+                  src={paintingData[0].artObjects[index].webImage.url}
+                  alt={paintingData[0].artObjects[index].title}
                 />
                 <p className="painting_text">
-                  {`${paintingDataTestPage2[0].artObjects[index].longTitle}`}
+                  {`${paintingData[0].artObjects[index].longTitle}`}
                 </p>
               </div>
             </li>
