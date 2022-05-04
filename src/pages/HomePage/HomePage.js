@@ -50,7 +50,6 @@ const HomePage = () => {
   return (
     <StyledHomePage>
       <HeaderComponent />
-
       <InfoComponent
         titleText={"WELCOME TO OUR GALLERY"}
         paragraphText={
