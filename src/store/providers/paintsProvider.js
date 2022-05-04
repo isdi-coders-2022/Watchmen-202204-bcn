@@ -1,5 +1,4 @@
 import { useReducer } from "react";
-import { paintingDataTestPage2 } from "../../dataTest/paintingData";
 import PaintsContext from "../contexts/paintsContext";
 import appReducer from "../reducers/appReducer";
 
