@@ -3,7 +3,6 @@ import styled from "styled-components";
 import HeaderComponent from "../../components/HeaderComponent/HeaderComponent";
 import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 import { NavLink } from "react-router-dom";
-import LoadingComponent from "../../components/LoadingComponent/LoadingComponent";
 
 const StyledHomePage = styled.div`
   background-image: linear-gradient(
