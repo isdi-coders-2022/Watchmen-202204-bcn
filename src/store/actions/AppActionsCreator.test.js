@@ -3,13 +3,18 @@ import {
   deletePaintings,
   editPaintings,
 } from "./AppActionsCreator";
-import actionTypes from "./AppActionsTypes";
+
+import {
+  addPaintingsTypes,
+  deletePaintingsTypes,
+  editPaintingsTypes,
+} from "./AppActionsTypes";
 
 describe("Given a addPaintings function", () => {
   describe("When it's called", () => {
     test("Then it should return an object", () => {
       const expectedResult = {
-        type: actionTypes.addPaintings,
+        type: addPaintingsTypes.addPaintings,
       };
 
       const receivedResult = addPaintings();
@@ -23,7 +28,7 @@ describe("Given a deletePaintings function", () => {
   describe("When it's called", () => {
     test("Then it should return an object", () => {
       const expectedResult = {
-        type: actionTypes.deletePaintings,
+        type: deletePaintingsTypes.deletePaintings,
       };
 
       const receivedResult = deletePaintings();
@@ -37,7 +42,7 @@ describe("Given a editPaintings function", () => {
   describe("When it's called", () => {
     test("Then it should return an object", () => {
       const expectedResult = {
-        type: actionTypes.editPaintings,
+        type: editPaintingsTypes.editPaintings,
       };
 
       const receivedResult = editPaintings();

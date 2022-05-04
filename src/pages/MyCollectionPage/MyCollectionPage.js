@@ -50,7 +50,7 @@ const StyledMyCollectionPage = styled.section`
   }
 
   .painting_container {
-    margin: 0;
+    margin: 20px;
     padding: 0;
   }
 
@@ -79,30 +79,6 @@ const MyCollectionPage = (iconAction) => {
           <PaintingComponent
             text="Dynamic image text information (Working on it)"
             image="https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=w500 "
-          />
-          <div className="image-container-icons">
-            <IconButtonComponent
-              divClassName="prova"
-              action={iconAction}
-              backgroundcolor="#fff"
-              iconSize="50px"
-              iconClassName="painting_icon"
-              iconName={faUserCircle}
-            />
-            <IconButtonComponent
-              divClassName="prova2"
-              action={iconAction}
-              backgroundcolor="#fff"
-              iconSize="50px"
-              iconClassName="painting_icon"
-              iconName={faCircleXmark}
-            />
-          </div>
-        </div>
-        <div className="image-container">
-          <PaintingComponent
-            text="Dynamic image text information (Working on it)"
-            image=" https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=w500 "
           />
           <div className="image-container-icons">
             <IconButtonComponent

@@ -10,7 +10,7 @@ describe("Given a HomePage Component", () => {
         </BrowserRouter>
       );
 
-      const expectedNumOfLi = 4;
+      const expectedNumOfLi = 5;
 
       const totalList = screen.getAllByRole("listitem");
 

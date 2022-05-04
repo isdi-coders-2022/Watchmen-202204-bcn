@@ -51,7 +51,7 @@ const PaintingComponent = ({ action }) => {
     <>
       <StyledPaintingComponent>
         <ul className="painting">
-          {paintingData[0].artObjects.map((painting, index) => (
+          {paintingData[0].artObjects.map((_painting, index) => (
             <li
               className="painting_list"
               key={paintingData[0].artObjects[index].id}
