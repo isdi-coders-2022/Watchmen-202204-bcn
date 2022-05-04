@@ -3,7 +3,7 @@ import CollectionPage from "./CollectionPage";
 const { render, screen } = require("@testing-library/react");
 describe("Given a CollectionPage Component", () => {
   describe("When it's invoked with his given Header Component)", () => {
-    test("Then it should render a HomePage with 5 list elements", () => {
+    test("Then it should render a HomePage with 24 list elements", () => {
       render(
         <BrowserRouter>
           <CollectionPage />

@@ -7,6 +7,8 @@ import {
   faSquareCaretRight,
 } from "@fortawesome/free-solid-svg-icons";
 import PaintingComponent from "../../components/PaintingComponent/PaintingComponent";
+import { useRef } from "react";
+import useFetch from "../../store/hooks/useFetch";
 
 const StyledCollectionPage = styled.section`
   position: relative;
@@ -42,28 +44,30 @@ const StyledCollectionPage = styled.section`
 
 const CollectionPage = () => {
   return (
-    <StyledCollectionPage>
-      <HeaderComponent />
-      <InfoComponent
-        titleText="COLLECTION 1"
-        paragraphText="Here you'll find our weekly collection of our three favourites artist. Take a look and surf to our amazing curated selection."
-      />
-      <PaintingComponent image=" https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=w500 " />
-      <div className="icon-container">
-        <IconButtonComponent
-          backgroundcolor="#fff"
-          iconSize="50px"
-          iconClassName="marginIcon"
-          iconName={faSquareCaretLeft}
+    <div>
+      <StyledCollectionPage>
+        <HeaderComponent />
+        <InfoComponent
+          titleText={"ARTIST NAME"}
+          paragraphText="Here you'll find our weekly collection of our three favourites artist. Take a look and surf to our amazing curated selection."
         />
-        <IconButtonComponent
-          backgroundcolor="#fff"
-          iconSize="50px"
-          iconClassName="marginIcon"
-          iconName={faSquareCaretRight}
-        />
-      </div>
-    </StyledCollectionPage>
+        <PaintingComponent image=" https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=w500 " />
+        <div className="icon-container">
+          <IconButtonComponent
+            backgroundcolor="#fff"
+            iconSize="50px"
+            iconClassName="marginIcon"
+            iconName={faSquareCaretLeft}
+          />
+          <IconButtonComponent
+            backgroundcolor="#fff"
+            iconSize="50px"
+            iconClassName="marginIcon"
+            iconName={faSquareCaretRight}
+          />
+        </div>
+      </StyledCollectionPage>
+    </div>
   );
 };
 
