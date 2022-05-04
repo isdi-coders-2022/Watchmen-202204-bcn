@@ -7,8 +7,6 @@ import {
   faSquareCaretRight,
 } from "@fortawesome/free-solid-svg-icons";
 import PaintingComponent from "../../components/PaintingComponent/PaintingComponent";
-import { useRef } from "react";
-import useFetch from "../../store/hooks/useFetch";
 
 const StyledCollectionPage = styled.section`
   position: relative;
