@@ -1,13 +1,17 @@
-import actionTypes from "./AppActionsTypes";
+import {
+  addPaintingsTypes,
+  deletePaintingsTypes,
+  editPaintingsTypes,
+} from "./AppActionsTypes";
 
 export const addPaintings = () => ({
-  type: actionTypes.addPaintings,
+  type: addPaintingsTypes.addPaintings,
 });
 
 export const deletePaintings = () => ({
-  type: actionTypes.deletePaintings,
+  type: deletePaintingsTypes.deletePaintings,
 });
 
 export const editPaintings = () => ({
-  type: actionTypes.editPaintings,
+  type: editPaintingsTypes.editPaintings,
 });

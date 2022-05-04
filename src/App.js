@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/welcome" element={<WelcomePage />} />
-          <Route path="/collection" element={<CollectionPage />} />
+          <Route path="/rembrandtvanrijn" element={<CollectionPage />} />
           <Route path="/detail" element={<DetailPage />} />
           <Route path="/mycollection" element={<MyCollectionPage />} />
         </Routes>
