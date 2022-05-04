@@ -1,12 +1,12 @@
 import { BrowserRouter } from "react-router-dom";
-import CollectionPage from "./CollectionPage";
+import CollectionPage3 from "./CollectionPage3";
 const { render, screen } = require("@testing-library/react");
-describe("Given a CollectionPage Component", () => {
+describe("Given a CollectionPage3 Component", () => {
   describe("When it's invoked with his given Header Component)", () => {
     test("Then it should render a HomePage with 24 list elements", () => {
       render(
         <BrowserRouter>
-          <CollectionPage />
+          <CollectionPage3 />
         </BrowserRouter>
       );
 
