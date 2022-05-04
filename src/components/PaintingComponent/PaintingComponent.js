@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import paintingData from "../../dataTest/paintingData";
 
 const StyledPaintingComponent = styled.div`
   .painting {
@@ -27,10 +28,12 @@ const StyledPaintingComponent = styled.div`
     text-align: center;
   }
   .painting_image {
-    height: 425px;
+    width: 417.44px;
+    height: 465px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
     padding: 20px;
+    object-fit: cover;
   }
 
   .painting_text {
@@ -43,17 +46,28 @@ const StyledPaintingComponent = styled.div`
   }
 `;
 
-const PaintingComponent = ({ text, image, description, action }) => {
+const PaintingComponent = ({ action }) => {
   return (
     <>
       <StyledPaintingComponent>
         <ul className="painting">
-          <li className="painting_list">
-            <div className="painting_container" onClick={action}>
-              <img className="painting_image" src={image} alt={description} />
-              <p className="painting_text">{text}</p>
-            </div>
-          </li>
+          {paintingData[0].artObjects.map((painting, index) => (
+            <li
+              className="painting_list"
+              key={paintingData[0].artObjects[index].id}
+            >
+              <div className="painting_container" onClick={action}>
+                <img
+                  className="painting_image"
+                  src={paintingData[0].artObjects[index].webImage.url}
+                  alt={paintingData[0].artObjects[index].title}
+                />
+                <p className="painting_text">
+                  {`${paintingData[0].artObjects[index].longTitle}`}
+                </p>
+              </div>
+            </li>
+          ))}
         </ul>
       </StyledPaintingComponent>
     </>

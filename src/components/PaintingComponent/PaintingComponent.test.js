@@ -6,7 +6,7 @@ describe("Given a PaintingComponent Component", () => {
     test("Then it should render a PaintingComponent with 1 li item", () => {
       render(<PaintingComponent />);
 
-      const expectedNumOfLi = 1;
+      const expectedNumOfLi = 20;
 
       const totalList = screen.getAllByRole("listitem");
 
