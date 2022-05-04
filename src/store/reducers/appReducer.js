@@ -1,21 +1,25 @@
-import actionTypes from "../actions/AppActionsTypes";
+import {
+  addPaintingsTypes,
+  deletePaintingsTypes,
+  editPaintingsTypes,
+} from "../actions/AppActionsTypes";
 
 const appReducer = (currentState, action) => {
   let newState;
   switch (action.type) {
-    case actionTypes.addPaintings:
+    case addPaintingsTypes.addPaintings:
       newState = {
         ...currentState,
         painting: "",
       };
       break;
-    case actionTypes.deletePaintings:
+    case deletePaintingsTypes.deletePaintings:
       newState = {
         ...currentState,
         painting: "",
       };
       break;
-    case actionTypes.editPaintings:
+    case editPaintingsTypes.editPaintings:
       newState = {
         ...currentState,
         painting: "",

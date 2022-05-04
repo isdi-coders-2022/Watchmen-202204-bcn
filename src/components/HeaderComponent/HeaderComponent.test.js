@@ -12,7 +12,7 @@ describe("Given a Header Component", () => {
       );
 
       const displayHeader = screen.getAllByRole("listitem");
-      expect(displayHeader.length).toBe(4);
+      expect(displayHeader.length).toBe(5);
     });
   });
 });

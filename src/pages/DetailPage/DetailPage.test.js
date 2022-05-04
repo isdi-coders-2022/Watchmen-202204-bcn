@@ -10,7 +10,7 @@ describe("Given a DetailPage Component", () => {
         </BrowserRouter>
       );
 
-      const expectedNumOfLi = 8;
+      const expectedNumOfLi = 9;
 
       const totalList = screen.getAllByRole("listitem");
 

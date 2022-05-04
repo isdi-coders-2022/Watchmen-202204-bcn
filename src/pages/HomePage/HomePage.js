@@ -2,6 +2,7 @@ import InfoComponent from "../../components/InfoComponent/InfoComponent";
 import styled from "styled-components";
 import HeaderComponent from "../../components/HeaderComponent/HeaderComponent";
 import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
+import { NavLink } from "react-router-dom";
 
 const StyledHomePage = styled.div`
   background-image: linear-gradient(
@@ -56,7 +57,9 @@ const HomePage = () => {
           "Weekart is an online gallery that prodives artistic content in a weekly base. Here you will find our most fresh selection during the last week from our community and curators. Take a look and collect your most favorite art by hitting the button Explore below!"
         }
       />
-      <ButtonComponent backgroundcolor={"#C65A4B"} text={"Explore"} />
+      <NavLink to="/welcome">
+        <ButtonComponent backgroundcolor={"#C65A4B"} text={"Explore"} />
+      </NavLink>
     </StyledHomePage>
   );
 };
