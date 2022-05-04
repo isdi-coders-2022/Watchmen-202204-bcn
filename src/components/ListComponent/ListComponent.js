@@ -55,7 +55,7 @@ const StyledListComponent = styled.div`
   }
 `;
 
-const ListComponent = ({ text, image, description, action }) => {
+const ListComponent = ({ _text, _image, description, action }) => {
   return (
     <>
       <StyledListComponent>
