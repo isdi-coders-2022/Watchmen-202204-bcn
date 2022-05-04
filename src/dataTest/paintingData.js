@@ -40,8 +40,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-C-597",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-C-597",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-C-597",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-C-597",
         },
         id: "en-SK-C-597",
         objectNumber: "SK-C-597",
@@ -72,8 +72,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-C-216",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-C-216",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-C-216",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-C-216",
         },
         id: "en-SK-C-216",
         objectNumber: "SK-C-216",
@@ -104,8 +104,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-4050",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-4050",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-4050",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-4050",
         },
         id: "en-SK-A-4050",
         objectNumber: "SK-A-4050",
@@ -136,8 +136,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-C-6",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-C-6",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-C-6",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-C-6",
         },
         id: "en-SK-C-6",
         objectNumber: "SK-C-6",
@@ -169,8 +169,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-4691",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-4691",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-4691",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-4691",
         },
         id: "en-SK-A-4691",
         objectNumber: "SK-A-4691",
@@ -200,8 +200,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-5033",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-5033",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-5033",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-5033",
         },
         id: "en-SK-A-5033",
         objectNumber: "SK-A-5033",
@@ -231,8 +231,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-C-1768",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-C-1768",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-C-1768",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-C-1768",
         },
         id: "en-SK-C-1768",
         objectNumber: "SK-C-1768",
@@ -262,8 +262,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/RP-T-1996-6",
-          web: "http://www.rijksmuseum.nl/en/collection/RP-T-1996-6",
+          self: "https://www.rijksmuseum.nl/api/en/collection/RP-T-1996-6",
+          web: "https://www.rijksmuseum.nl/en/collection/RP-T-1996-6",
         },
         id: "en-RP-T-1996-6",
         objectNumber: "RP-T-1996-6",
@@ -294,8 +294,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-1935",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-1935",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-1935",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-1935",
         },
         id: "en-SK-A-1935",
         objectNumber: "SK-A-1935",
@@ -325,8 +325,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-3981",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-3981",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-3981",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-3981",
         },
         id: "en-SK-A-3981",
         objectNumber: "SK-A-3981",
@@ -356,8 +356,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-4674",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-4674",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-4674",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-4674",
         },
         id: "en-SK-A-4674",
         objectNumber: "SK-A-4674",
@@ -387,8 +387,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-4717",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-4717",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-4717",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-4717",
         },
         id: "en-SK-A-4717",
         objectNumber: "SK-A-4717",
@@ -418,8 +418,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-4833",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-4833",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-4833",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-4833",
         },
         id: "en-SK-A-4833",
         objectNumber: "SK-A-4833",
@@ -450,8 +450,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-4057",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-4057",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-4057",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-4057",
         },
         id: "en-SK-A-4057",
         objectNumber: "SK-A-4057",
@@ -481,8 +481,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-3982",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-3982",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-3982",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-3982",
         },
         id: "en-SK-A-3982",
         objectNumber: "SK-A-3982",
@@ -512,8 +512,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-3066",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-3066",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-3066",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-3066",
         },
         id: "en-SK-A-3066",
         objectNumber: "SK-A-3066",
@@ -544,8 +544,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-3138",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-3138",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-3138",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-3138",
         },
         id: "en-SK-A-3138",
         objectNumber: "SK-A-3138",
@@ -576,8 +576,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-3340",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-3340",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-3340",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-3340",
         },
         id: "en-SK-A-3340",
         objectNumber: "SK-A-3340",
@@ -607,8 +607,8 @@ const paintingData = [
       },
       {
         links: {
-          self: "http://www.rijksmuseum.nl/api/en/collection/SK-A-3276",
-          web: "http://www.rijksmuseum.nl/en/collection/SK-A-3276",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-A-3276",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-A-3276",
         },
         id: "en-SK-A-3276",
         objectNumber: "SK-A-3276",
