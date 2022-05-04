@@ -55,13 +55,13 @@ const StyledListComponent = styled.div`
   }
 `;
 
-const ListComponent = ({ text, image, description }) => {
+const ListComponent = ({ text, image, description, action }) => {
   return (
     <>
       <StyledListComponent>
         <ul className="collection">
           <li className="collection_list">
-            <div className="collection_container">
+            <div className="collection_container" onClick={action}>
               <div className="collection_image--overlay">
                 <img
                   className="collection_image"
@@ -77,7 +77,7 @@ const ListComponent = ({ text, image, description }) => {
         </ul>
         <ul className="collection">
           <li className="collection_list">
-            <div className="collection_container">
+            <div className="collection_container" onClick={action}>
               <div className="collection_image--overlay">
                 <img
                   className="collection_image"
@@ -93,7 +93,7 @@ const ListComponent = ({ text, image, description }) => {
         </ul>
         <ul className="collection">
           <li className="collection_list">
-            <div className="collection_container">
+            <div className="collection_container" onClick={action}>
               <div className="collection_image--overlay">
                 <img
                   className="collection_image"
