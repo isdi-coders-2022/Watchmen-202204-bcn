@@ -10,19 +10,19 @@ const appReducer = (currentState, action) => {
     case addPaintingsTypes.addPaintings:
       newState = {
         ...currentState,
-        painting: "",
+        painting: "Here we'll be the addPaintinfFunction",
       };
       break;
     case deletePaintingsTypes.deletePaintings:
       newState = {
         ...currentState,
-        painting: "",
+        painting: "Here we'll be the deletePaintinfFunction",
       };
       break;
     case editPaintingsTypes.editPaintings:
       newState = {
         ...currentState,
-        painting: "",
+        painting: "Here we'll be the editPaintinfFunction",
       };
       break;
     default:
