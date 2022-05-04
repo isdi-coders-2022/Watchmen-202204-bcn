@@ -5,12 +5,10 @@ import styled from "styled-components";
 
 const StyledWelcomePage = styled.section`
   h2 {
-    text-align: left;
     margin: 0.6em;
   }
 
   p {
-    text-align: left;
     padding: 0 1.2em;
   }
 `;

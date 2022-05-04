@@ -3,20 +3,16 @@ import HeaderComponent from "../../components/HeaderComponent/HeaderComponent";
 import styled from "styled-components";
 import IconButtonComponent from "../../components/IconButtonComponent/IconButtonComponent";
 import {
-  faCircleArrowLeft,
-  faCircleArrowRight,
+  faSquareCaretLeft,
+  faSquareCaretRight,
 } from "@fortawesome/free-solid-svg-icons";
 import PaintingComponent from "../../components/PaintingComponent/PaintingComponent";
 
 const StyledCollectionPage = styled.section`
   position: relative;
   .information {
-    text-align: left;
     padding: 0 1.2em;
     margin-bottom: 30px;
-  }
-
-  .paiting {
   }
 
   .painting_list {
@@ -58,13 +54,13 @@ const CollectionPage = () => {
           backgroundcolor="#fff"
           iconSize="50px"
           iconClassName="marginIcon"
-          iconName={faCircleArrowLeft}
+          iconName={faSquareCaretLeft}
         />
         <IconButtonComponent
           backgroundcolor="#fff"
           iconSize="50px"
           iconClassName="marginIcon"
-          iconName={faCircleArrowRight}
+          iconName={faSquareCaretRight}
         />
       </div>
     </StyledCollectionPage>
