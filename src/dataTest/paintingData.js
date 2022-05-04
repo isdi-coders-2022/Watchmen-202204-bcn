@@ -9,7 +9,8 @@ const paintingData = [
     artObjects: [
       {
         links: {
-          web: "http://www.rijksmuseum.nl/en/collection/SK-C-5",
+          self: "https://www.rijksmuseum.nl/api/en/collection/SK-C-5",
+          web: "https://www.rijksmuseum.nl/en/collection/SK-C-5",
         },
         id: "en-SK-C-5",
         objectNumber: "SK-C-5",
