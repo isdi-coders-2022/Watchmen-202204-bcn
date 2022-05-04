@@ -16,11 +16,6 @@ const StyledLoadingComponent = styled.section`
     border-radius: 0.5rem;
   }
 
-  .spinner-container p {
-    text-align: center;
-    margin: 5px 0 0 0;
-  }
-
   #upper {
     animation: rotate;
     animation-duration: 5s;
@@ -40,7 +35,7 @@ const StyledLoadingComponent = styled.section`
 
 const LoadingComponent = (props) => {
   return (
-    <StyledLoadingComponent>
+    <StyledLoadingComponent data-testid="custom-element">
       <div className="spinner-container">
         <svg
           width="100%"
@@ -71,7 +66,6 @@ const LoadingComponent = (props) => {
             />
           </g>
         </svg>
-        <p>{props.customText}</p>
       </div>
     </StyledLoadingComponent>
   );
