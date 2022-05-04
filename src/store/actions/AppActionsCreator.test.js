@@ -8,8 +8,8 @@ import {
 import actionTypes from "./AppActionsTypes";
 
 describe("Given a nextPaintings function", () => {
-  describe("When it's invoked", () => {
-    test("Then it should return a certain object", () => {
+  describe("When it's called", () => {
+    test("Then it should return an object", () => {
       const expectedResult = {
         type: actionTypes.nextPaintings,
       };
@@ -22,8 +22,8 @@ describe("Given a nextPaintings function", () => {
 });
 
 describe("Given a previousPaintings function", () => {
-  describe("When it's invoked", () => {
-    test("Then it should return a certain object", () => {
+  describe("When it's called", () => {
+    test("Then it should return an object", () => {
       const expectedResult = {
         type: actionTypes.previousPaintings,
       };
@@ -36,8 +36,8 @@ describe("Given a previousPaintings function", () => {
 });
 
 describe("Given a addPaintings function", () => {
-  describe("When it's invoked", () => {
-    test("Then it should return a certain object", () => {
+  describe("When it's called", () => {
+    test("Then it should return an object", () => {
       const expectedResult = {
         type: actionTypes.addPaintings,
       };
@@ -50,8 +50,8 @@ describe("Given a addPaintings function", () => {
 });
 
 describe("Given a deletePaintings function", () => {
-  describe("When it's invoked", () => {
-    test("Then it should return a certain object", () => {
+  describe("When it's called", () => {
+    test("Then it should return an object", () => {
       const expectedResult = {
         type: actionTypes.deletePaintings,
       };
@@ -64,8 +64,8 @@ describe("Given a deletePaintings function", () => {
 });
 
 describe("Given a editPaintings function", () => {
-  describe("When it's invoked", () => {
-    test("Then it should return a certain object", () => {
+  describe("When it's called", () => {
+    test("Then it should return an object", () => {
       const expectedResult = {
         type: actionTypes.editPaintings,
       };
