@@ -53,9 +53,9 @@ const FormComponent = ({
   image,
   description,
   heading1,
-  itemForm1,
-  inputId,
-  inputType,
+  _itemForm1,
+  _inputId,
+  _inputType,
   heading2,
 }) => {
   return (
