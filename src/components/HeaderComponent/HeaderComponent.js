@@ -150,16 +150,19 @@ const HeaderComponent = () => {
         </label>
         <ul className="menu">
           <li>
-            <NavLink to="/welcome">WELCOME PAGE</NavLink>
+            <NavLink to="/welcome">Home Page</NavLink>
           </li>
           <li>
-            <NavLink to="/collection">COLLECTION</NavLink>
+            <NavLink to="/rembrandtvanrijn">Rembrandt van Rijn</NavLink>
           </li>
           <li>
-            <NavLink to="/detail">DETAIL</NavLink>
+            <NavLink to="/rembrandtvanrijn">Rembrandt van Rijn</NavLink>
           </li>
           <li>
-            <NavLink to="/mycollection">MY COLLECTION</NavLink>
+            <NavLink to="/rembrandtvanrijn">Rembrandt van Rijn</NavLink>
+          </li>
+          <li>
+            <NavLink to="/mycollection">My Collection</NavLink>
           </li>
         </ul>
       </nav>

@@ -7,6 +7,8 @@ import {
   faSquareCaretRight,
 } from "@fortawesome/free-solid-svg-icons";
 import PaintingComponent from "../../components/PaintingComponent/PaintingComponent";
+import paintingData from "../../dataTest/paintingData";
+import { NavLink } from "react-router-dom";
 
 const StyledCollectionPage = styled.section`
   position: relative;
@@ -48,6 +50,16 @@ const CollectionPage = () => {
         <InfoComponent
           titleText={"ARTIST NAME"}
           paragraphText="Here you'll find our weekly collection of our three favourites artist. Take a look and surf to our amazing curated selection."
+      />
+      <NavLink to="/detail">
+        <PaintingComponent image=" https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=w500 " />
+      </NavLink>
+      <div className="icon-container">
+        <IconButtonComponent
+          backgroundcolor="#fff"
+          iconSize="50px"
+          iconClassName="marginIcon"
+          iconName={faSquareCaretLeft}
         />
         <PaintingComponent image=" https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=w500 " />
         <div className="icon-container">
