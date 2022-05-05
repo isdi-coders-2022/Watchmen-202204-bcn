@@ -4,10 +4,9 @@ import styled from "styled-components";
 import IconButtonComponent from "../../components/IconButtonComponent/IconButtonComponent";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import PaintsContext from "../../store/contexts/paintsContext";
 import useFetch from "../../store/hooks/useFetch";
-import { useEffect } from "react";
 import MyCollectionComponent from "../../components/MyCollectionComponent/MyCollectionComponent";
 
 const StyledMyCollectionPage = styled.section`
