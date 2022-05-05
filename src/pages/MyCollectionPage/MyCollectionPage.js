@@ -67,7 +67,7 @@ const StyledMyCollectionPage = styled.section`
   }
 `;
 
-const MyCollectionPage = (iconAction, action) => {
+const MyCollectionPage = (_iconAction, action) => {
   const { paintingState } = useContext(PaintsContext);
   const { getApiData } = useFetch();
 
