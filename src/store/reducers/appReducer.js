@@ -7,19 +7,19 @@ import {
 const appReducer = (currentState, action) => {
   let newState;
   switch (action.type) {
-    case addPaintingsTypes.addPaintings:
+    case addPaintingsTypes:
       newState = {
         ...currentState,
         painting: "Here we'll be the addPaintinfFunction",
       };
       break;
-    case deletePaintingsTypes.deletePaintings:
+    case deletePaintingsTypes:
       newState = {
         ...currentState,
         painting: "Here we'll be the deletePaintinfFunction",
       };
       break;
-    case editPaintingsTypes.editPaintings:
+    case editPaintingsTypes:
       newState = {
         ...currentState,
         painting: "Here we'll be the editPaintinfFunction",
