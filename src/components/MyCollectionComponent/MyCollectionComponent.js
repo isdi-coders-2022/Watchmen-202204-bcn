@@ -2,7 +2,6 @@ import { faCircleXmark, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import styled from "styled-components";
 import { deletePaintings } from "../../store/actions/AppActionsCreator";
-import { editPaintingsTypes } from "../../store/actions/AppActionsTypes";
 import PaintsContext from "../../store/contexts/paintsContext";
 import IconButtonComponent from "../IconButtonComponent/IconButtonComponent";
 
@@ -71,7 +70,7 @@ const MyCollectionComponent = ({ paintings }) => {
                   <div className="image-container-icons">
                     <IconButtonComponent
                       divClassName="prova"
-                      action={() => editPaintingsTypes}
+                      action={() => null}
                       backgroundcolor="#fff"
                       iconSize="50px"
                       iconClassName="painting_icon"

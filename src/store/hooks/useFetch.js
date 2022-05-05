@@ -10,8 +10,6 @@ const useFetch = () => {
 
   const getApiData = useCallback(
     (url) => {
-      if (url === undefined) {
-      }
       (async () => {
         dispatch(fetchingPaintings());
         const response = await fetch(url);

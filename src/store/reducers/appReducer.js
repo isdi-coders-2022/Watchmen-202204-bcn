@@ -25,7 +25,7 @@ const appReducer = (currentState, action) => {
     case addPaintingsTypes:
       newState = {
         ...currentState,
-        painting: currentState.concat(action.paintings),
+        paintings: currentState.paintings.concat(action.newPainting),
       };
       break;
     case deletePaintingsTypes:
