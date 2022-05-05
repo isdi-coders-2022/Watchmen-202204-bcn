@@ -14,13 +14,13 @@ const appReducer = (currentState, action) => {
     case addPaintingsTypes:
       newState = {
         ...currentState,
-        painting: "Here we'll be the addPaintinfFunction",
+        painting: currentState.concat(action.paintings),
       };
       break;
     case deletePaintingsTypes:
       newState = {
         ...currentState,
-        painting: "Here we'll be the deletePaintinfFunction",
+        painting: currentState.slice(0, action.paintings),
       };
       break;
     case editPaintingsTypes:
