@@ -1,6 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
 import MyCollectionPage from "./MyCollectionPage";
-import { setupWorker, rest } from "msw";
 import PaintsProvider from "../../store/providers/paintsProvider";
 const { render, screen } = require("@testing-library/react");
 

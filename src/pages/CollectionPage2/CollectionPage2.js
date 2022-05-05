@@ -7,10 +7,10 @@ import {
   faSquareCaretRight,
 } from "@fortawesome/free-solid-svg-icons";
 import PaintingComponent from "../../components/PaintingComponent/PaintingComponent";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import PaintsContext from "../../store/contexts/paintsContext";
 import useFetch from "../../store/hooks/useFetch";
-import { useEffect } from "react";
+import LoadingComponent from "../../components/LoadingComponent/LoadingComponent";
 
 const StyledCollectionPage = styled.section`
   position: relative;
@@ -45,7 +45,7 @@ const StyledCollectionPage = styled.section`
 `;
 
 const CollectionPage2 = () => {
-  const { paintings } = useContext(PaintsContext);
+  const { paintingState } = useContext(PaintsContext);
   const { getApiData } = useFetch();
 
   useEffect(() => {
@@ -53,6 +53,10 @@ const CollectionPage2 = () => {
       "https://www.rijksmuseum.nl/api/en/collection/?key=jjq73gPu&format=json&involvedMaker=Johannes+Vermeer&p=0&ps=15&imgonly=True&artist=relevance"
     );
   }, [getApiData]);
+
+  if (paintingState.loading) {
+    return <LoadingComponent />;
+  }
 
   return (
     <StyledCollectionPage>

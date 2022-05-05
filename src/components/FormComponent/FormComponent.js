@@ -19,7 +19,7 @@ const StyledFormComponent = styled.section`
   }
 
   .painting_image {
-    height: 100%;
+    height: 1000px;
     width: 100%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 20px;
