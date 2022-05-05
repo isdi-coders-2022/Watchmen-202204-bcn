@@ -8,6 +8,7 @@ import {
   faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import PaintingComponent from "../../components/PaintingComponent/PaintingComponent";
+import { NavLink } from "react-router-dom";
 
 const StyledMyCollectionPage = styled.section`
   position: relative;
@@ -97,12 +98,14 @@ const MyCollectionPage = (iconAction) => {
           </div>
         </div>
         <div className="icon-container">
-          <IconButtonComponent
-            backgroundcolor="#fff"
-            iconSize="50px"
-            iconClassName="marginIcon"
-            iconName={faCirclePlus}
-          />
+          <NavLink to="/form">
+            <IconButtonComponent
+              backgroundcolor="#fff"
+              iconSize="50px"
+              iconClassName="marginIcon"
+              iconName={faCirclePlus}
+            />
+          </NavLink>
         </div>
       </StyledMyCollectionPage>
     </>
