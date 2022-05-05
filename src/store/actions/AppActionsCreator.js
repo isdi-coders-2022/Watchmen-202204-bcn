@@ -5,16 +5,16 @@ import {
 } from "./AppActionsTypes";
 
 export const addPaintings = (painting) => ({
-  type: addPaintingsTypes.addPaintings,
+  type: addPaintingsTypes,
   painting,
 });
 
 export const deletePaintings = (painting) => ({
-  type: deletePaintingsTypes.deletePaintings,
+  type: deletePaintingsTypes,
   painting,
 });
 
 export const editPaintings = (painting) => ({
-  type: editPaintingsTypes.editPaintings,
+  type: editPaintingsTypes,
   painting,
 });
