@@ -14,7 +14,7 @@ describe("Given a addPaintings function", () => {
   describe("When it's called", () => {
     test("Then it should return an object", () => {
       const expectedResult = {
-        type: addPaintingsTypes.addPaintings,
+        type: addPaintingsTypes,
       };
 
       const receivedResult = addPaintings();
@@ -28,7 +28,7 @@ describe("Given a deletePaintings function", () => {
   describe("When it's called", () => {
     test("Then it should return an object", () => {
       const expectedResult = {
-        type: deletePaintingsTypes.deletePaintings,
+        type: deletePaintingsTypes,
       };
 
       const receivedResult = deletePaintings();
@@ -42,7 +42,7 @@ describe("Given a editPaintings function", () => {
   describe("When it's called", () => {
     test("Then it should return an object", () => {
       const expectedResult = {
-        type: editPaintingsTypes.editPaintings,
+        type: editPaintingsTypes,
       };
 
       const receivedResult = editPaintings();

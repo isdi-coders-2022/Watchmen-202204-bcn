@@ -10,14 +10,17 @@ export const renderingPaintings = (paintings) => ({
   paintings,
 });
 
-export const addPaintings = () => ({
-  type: addPaintingsTypes.addPaintings,
+export const addPaintings = (painting) => ({
+  type: addPaintingsTypes,
+  painting,
 });
 
-export const deletePaintings = () => ({
-  type: deletePaintingsTypes.deletePaintings,
+export const deletePaintings = (painting) => ({
+  type: deletePaintingsTypes,
+  painting,
 });
 
-export const editPaintings = () => ({
-  type: editPaintingsTypes.editPaintings,
+export const editPaintings = (painting) => ({
+  type: editPaintingsTypes,
+  painting,
 });
