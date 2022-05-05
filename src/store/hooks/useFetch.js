@@ -1,29 +1,27 @@
-import { useState, useEffect } from "react";
+import { useCallback } from "react";
+import PaintsContext from "../contexts/paintsContext";
+import { useContext } from "react";
+import { renderingPaintings } from "../actions/AppActionsCreator";
 
-export const useFetch = (url, ref, initialValue) => {
-  const [data, setData] = useState(initialValue);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
+const useFetch = () => {
+  const { dispatch } = useContext(PaintsContext);
 
-  useEffect(() => {
-    if (ref.current) {
+  const getApiData = useCallback(
+    (url) => {
+      if (url === undefined) {
+        url =
+          "https://www.rijksmuseum.nl/api/en/collection/?key=jjq73gPu&format=json&involvedMaker=Rembrandt+van+Rijn&p=0&ps=15&imgonly=True&artist=relevance";
+      }
       (async () => {
-        try {
-          const response = await fetch(url);
-          const paintingsCollection = await response.json();
-          setData(paintingsCollection);
-        } catch (err) {
-          setError(err);
-        } finally {
-          setLoading(false);
-        }
+        const response = await fetch(url);
+        const paintingsCollection = await response.json();
+        dispatch(renderingPaintings(paintingsCollection.artObjects));
       })();
-    }
-    return () => {
-      ref.current = false;
-    };
-  }, [url, ref]);
-  return { loading, data, error };
+    },
+    [dispatch]
+  );
+
+  return { getApiData };
 };
 
 export default useFetch;
