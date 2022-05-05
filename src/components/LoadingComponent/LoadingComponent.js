@@ -50,7 +50,7 @@ const LoadingComponent = (props) => {
               cy="138"
               r="60"
               stroke="#DBDBDB"
-              stroke-width="10"
+              strokeWidth="10"
             />
             <circle
               id="upper"
@@ -58,10 +58,10 @@ const LoadingComponent = (props) => {
               cy="138"
               r="69"
               stroke="#111"
-              stroke-width="15"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-dasharray="373 100"
+              strokeWidth="15"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeDasharray="373 100"
               style={{ animationDuration: props.speed + "s" }}
             />
           </g>
