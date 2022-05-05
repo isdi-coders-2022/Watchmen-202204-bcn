@@ -58,36 +58,40 @@ const MyCollectionComponent = ({ paintings }) => {
     <>
       <StyledMyCollectionComponent>
         <ul className="painting">
-          {paintings.map((_painting, index) => (
-            <li className="painting_list" key={paintings[index].id}>
-              <div className="painting_container">
-                <img
-                  className="painting_image"
-                  src={paintings[index].webImage.url}
-                  alt={paintings[index].title}
-                />
-                <p className="painting_text">{`${paintings[index].longTitle}`}</p>
-                <div className="image-container-icons">
-                  <IconButtonComponent
-                    divClassName="prova"
-                    action={() => editPaintingsTypes}
-                    backgroundcolor="#fff"
-                    iconSize="50px"
-                    iconClassName="painting_icon"
-                    iconName={faUserCircle}
+          {paintings.length ? (
+            paintings.map((_painting, index) => (
+              <li className="painting_list" key={paintings[index].id}>
+                <div className="painting_container">
+                  <img
+                    className="painting_image"
+                    src={paintings[index].webImage.url}
+                    alt={paintings[index].title}
                   />
-                  <IconButtonComponent
-                    divClassName="prova2"
-                    action={() => dispatch(deletePaintings(index))}
-                    backgroundcolor="#fff"
-                    iconSize="50px"
-                    iconClassName="painting_icon"
-                    iconName={faCircleXmark}
-                  />
+                  <p className="painting_text">{`${paintings[index].longTitle}`}</p>
+                  <div className="image-container-icons">
+                    <IconButtonComponent
+                      divClassName="prova"
+                      action={() => editPaintingsTypes}
+                      backgroundcolor="#fff"
+                      iconSize="50px"
+                      iconClassName="painting_icon"
+                      iconName={faUserCircle}
+                    />
+                    <IconButtonComponent
+                      divClassName="prova2"
+                      action={() => dispatch(deletePaintings(index))}
+                      backgroundcolor="#fff"
+                      iconSize="50px"
+                      iconClassName="painting_icon"
+                      iconName={faCircleXmark}
+                    />
+                  </div>
                 </div>
-              </div>
-            </li>
-          ))}
+              </li>
+            ))
+          ) : (
+            <li>No paintings found.</li>
+          )}
         </ul>
       </StyledMyCollectionComponent>
     </>
