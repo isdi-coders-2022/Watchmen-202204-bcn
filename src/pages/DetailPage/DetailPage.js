@@ -14,13 +14,10 @@ const DetailPage = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.warn(location);
-    if (location.state) {
-      getApiDetailsData(
-        `https://www.rijksmuseum.nl/api/en/collection/${location.state.myState}?key=jjq73gPu`
-      );
-    }
-  }, [getApiDetailsData, location]);
+    getApiDetailsData(
+      `https://www.rijksmuseum.nl/api/en/collection/${location.state.myState}?key=jjq73gPu`
+    );
+  }, [getApiDetailsData, location.state.myState]);
 
   const addItem = () => {
     const newPainting = paintings[0];
@@ -28,7 +25,7 @@ const DetailPage = () => {
     dispatch(addPaintingsTypes(newPainting));
   };
 
-  return paintings ? (
+  return (
     <>
       <HeaderComponent />
       <DetailComponent paintings={paintings} />
@@ -38,8 +35,6 @@ const DetailPage = () => {
         onAddItem={addItem}
       />
     </>
-  ) : (
-    <p>Tuputamadre</p>
   );
 };
 
