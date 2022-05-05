@@ -5,7 +5,7 @@ import DetailComponent from "./DetailComponent";
 describe("Given a InfoComponent component", () => {
   describe("When it receives a text 'Title''", () => {
     test("Then it should render the given text", () => {
-      const titleText = "Title";
+      const titleText = "Artwork Details";
 
       render(
         <PaintsProvider>

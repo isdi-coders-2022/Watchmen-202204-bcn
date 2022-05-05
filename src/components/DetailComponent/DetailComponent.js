@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import detailData from "../../dataTest/detailData";
 
 const StyledDetailComponent = styled.section`
   text-align: left;
@@ -15,29 +16,19 @@ const StyledDetailComponent = styled.section`
   }
 `;
 
-const DetailComponent = ({
-  heading1,
-  pharagraphtext1,
-  heading2,
-  pharagraphtext2,
-  heading3,
-  mediumText,
-  dimensionsText,
-  classificationText,
-  creditLineText,
-}) => {
+const DetailComponent = () => {
   return (
     <StyledDetailComponent>
-      <h2>{heading1}</h2>
-      <p>{pharagraphtext1}</p>
-      <h3>{heading2}</h3>
-      <p>{pharagraphtext2}</p>
-      <h3>{heading3}</h3>
+      <h2>{detailData[0].artObject.title}</h2>
+      <p>{detailData[0].artObject.dating.presentingDate}</p>
+      <h3>{detailData[0].artObject.principalMaker}</h3>
+      <p>{detailData[0].artObject.label.description}</p>
+      <h3>Artwork Details</h3>
       <ul>
-        <li>Medium: {mediumText}</li>
-        <li>Dimensions:{dimensionsText} </li>
-        <li>Classification: {classificationText}</li>
-        <li>Credit Line: {creditLineText}</li>
+        <li>Medium: {detailData[0].artObject.physicalMedium}</li>
+        <li>Dimensions: {detailData[0].artObject.subTitle} </li>
+        <li>Classification: {detailData[0].artObject.objectTypes}</li>
+        <li>Credit Line: {detailData[0].artObject.acquisition.creditLine}</li>
       </ul>
     </StyledDetailComponent>
   );
