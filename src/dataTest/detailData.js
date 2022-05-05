@@ -3,7 +3,7 @@ const detailData = [
     elapsedMilliseconds: 160,
     artObject: {
       links: {
-        search: "http://www.rijksmuseum.nl/api/nl/collection",
+        search: "https://www.rijksmuseum.nl/api/nl/collection",
       },
       id: "en-SK-C-597",
       priref: "5237",

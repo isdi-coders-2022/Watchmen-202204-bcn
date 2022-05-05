@@ -2,6 +2,7 @@ import {
   addPaintingsTypes,
   deletePaintingsTypes,
   editPaintingsTypes,
+  fetchingPaintingsTypes,
   renderingPaintingsTypes,
   renderingDetailsPaintingTypes,
 } from "../actions/AppActionsTypes";
@@ -9,8 +10,18 @@ import {
 const appReducer = (currentState, action) => {
   let newState;
   switch (action.type) {
+    case fetchingPaintingsTypes:
+      newState = {
+        ...currentState,
+        loading: true,
+      };
+      break;
     case renderingPaintingsTypes:
-      newState = [...action.paintings];
+      newState = {
+        ...currentState,
+        paintings: action.paintings,
+        loading: false,
+      };
       break;
     case renderingDetailsPaintingTypes:
       newState = [{ ...action.paintings }];
@@ -18,13 +29,15 @@ const appReducer = (currentState, action) => {
     case addPaintingsTypes:
       newState = {
         ...currentState,
-        painting: "Here we'll be the addPaintinfFunction",
+        painting: currentState.concat(action.paintings),
       };
       break;
     case deletePaintingsTypes:
       newState = {
         ...currentState,
-        painting: "Here we'll be the deletePaintinfFunction",
+        paintings: currentState.paintings.filter(
+          (_, i) => i !== action.indexToRemove
+        ),
       };
       break;
     case editPaintingsTypes:

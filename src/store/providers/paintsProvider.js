@@ -3,11 +3,11 @@ import PaintsContext from "../contexts/paintsContext";
 import appReducer from "../reducers/appReducer";
 
 const PaintsProvider = ({ children }) => {
-  const initialState = [];
-  const [paintings, dispatch] = useReducer(appReducer, initialState);
+  const initialState = { paintings: [], loading: false };
+  const [paintingState, dispatch] = useReducer(appReducer, initialState);
 
   return (
-    <PaintsContext.Provider value={{ paintings, dispatch }}>
+    <PaintsContext.Provider value={{ paintingState, dispatch }}>
       {children}
     </PaintsContext.Provider>
   );

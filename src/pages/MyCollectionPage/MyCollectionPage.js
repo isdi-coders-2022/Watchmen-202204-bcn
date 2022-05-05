@@ -2,17 +2,12 @@ import InfoComponent from "../../components/InfoComponent/InfoComponent";
 import HeaderComponent from "../../components/HeaderComponent/HeaderComponent";
 import styled from "styled-components";
 import IconButtonComponent from "../../components/IconButtonComponent/IconButtonComponent";
-import {
-  faCirclePlus,
-  faCircleXmark,
-  faUserCircle,
-} from "@fortawesome/free-solid-svg-icons";
-import PaintingComponent from "../../components/PaintingComponent/PaintingComponent";
+import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import PaintsContext from "../../store/contexts/paintsContext";
 import useFetch from "../../store/hooks/useFetch";
-import { useEffect } from "react";
+import MyCollectionComponent from "../../components/MyCollectionComponent/MyCollectionComponent";
 
 const StyledMyCollectionPage = styled.section`
   position: relative;
@@ -36,7 +31,8 @@ const StyledMyCollectionPage = styled.section`
     position: absolute;
     justify-content: space-around;
     width: 417.44px;
-    top: 15%;
+    margin-left: 20px;
+    top: 10%;
   }
 
   .prova {
@@ -71,12 +67,14 @@ const StyledMyCollectionPage = styled.section`
   }
 `;
 
-const MyCollectionPage = (iconAction, action) => {
-  const { paintings } = useContext(PaintsContext);
+const MyCollectionPage = (_iconAction, action) => {
+  const { paintingState } = useContext(PaintsContext);
   const { getApiData } = useFetch();
 
   useEffect(() => {
-    getApiData();
+    getApiData(
+      "https://www.rijksmuseum.nl/api/en/collection/?key=jjq73gPu&format=json&involvedMaker=Rembrandt+van+Rijn&p=0&ps=3&imgonly=True&artist=relevance"
+    );
   }, [getApiData]);
 
   return (
@@ -88,25 +86,7 @@ const MyCollectionPage = (iconAction, action) => {
           paragraphText="Filter by presenting date"
         />
         <div className="image-container">
-          <PaintingComponent paintings={paintings} />
-          <div className="image-container-icons">
-            <IconButtonComponent
-              divClassName="prova"
-              action={() => iconAction}
-              backgroundcolor="#fff"
-              iconSize="50px"
-              iconClassName="painting_icon"
-              iconName={faUserCircle}
-            />
-            <IconButtonComponent
-              divClassName="prova2"
-              action={() => iconAction}
-              backgroundcolor="#fff"
-              iconSize="50px"
-              iconClassName="painting_icon"
-              iconName={faCircleXmark}
-            />
-          </div>
+          <MyCollectionComponent paintings={paintingState.paintings} />
         </div>
         <div className="icon-container">
           <NavLink to="/form">
