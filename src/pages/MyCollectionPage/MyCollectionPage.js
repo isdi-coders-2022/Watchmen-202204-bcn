@@ -31,7 +31,7 @@ const StyledMyCollectionPage = styled.section`
     position: absolute;
     justify-content: space-around;
     width: 417.44px;
-    top: 9%;
+    top: 15%;
   }
 
   .prova {
@@ -76,10 +76,7 @@ const MyCollectionPage = (iconAction) => {
           paragraphText="Filter by presenting date"
         />
         <div className="image-container">
-          <PaintingComponent
-            text="Dynamic image text information (Working on it)"
-            image="https://lh3.googleusercontent.com/cRtF3WdYfRQEraAcQz8dWDJOq3XsRX-h244rOw6zwkHtxy7NHjJOany7u4I2EG_uMAfNwBLHkFyLMENzpmfBTSYXIH_F=w500 "
-          />
+          <PaintingComponent />
           <div className="image-container-icons">
             <IconButtonComponent
               divClassName="prova"
