@@ -1,6 +1,5 @@
 import { useCallback, useContext } from "react";
 import PaintsContext from "../contexts/paintsContext";
-import { useContext } from "react";
 import {
   fetchingPaintings,
   renderingPaintings,
