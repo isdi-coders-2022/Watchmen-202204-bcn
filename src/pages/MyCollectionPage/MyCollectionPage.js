@@ -2,12 +2,7 @@ import InfoComponent from "../../components/InfoComponent/InfoComponent";
 import HeaderComponent from "../../components/HeaderComponent/HeaderComponent";
 import styled from "styled-components";
 import IconButtonComponent from "../../components/IconButtonComponent/IconButtonComponent";
-import {
-  faCirclePlus,
-  faCircleXmark,
-  faUserCircle,
-} from "@fortawesome/free-solid-svg-icons";
-import PaintingComponent from "../../components/PaintingComponent/PaintingComponent";
+import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import PaintsContext from "../../store/contexts/paintsContext";
