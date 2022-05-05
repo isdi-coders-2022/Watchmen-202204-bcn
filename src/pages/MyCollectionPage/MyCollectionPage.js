@@ -69,7 +69,7 @@ const StyledMyCollectionPage = styled.section`
 `;
 
 const MyCollectionPage = (iconAction, action) => {
-  const { paintings } = useContext(PaintsContext);
+  const { paintingState } = useContext(PaintsContext);
   const { getApiData } = useFetch();
 
   useEffect(() => {
@@ -87,7 +87,7 @@ const MyCollectionPage = (iconAction, action) => {
           paragraphText="Filter by presenting date"
         />
         <div className="image-container">
-          <MyCollectionComponent paintings={paintings} />
+          <MyCollectionComponent paintings={paintingState.paintings} />
         </div>
         <div className="icon-container">
           <NavLink to="/form">

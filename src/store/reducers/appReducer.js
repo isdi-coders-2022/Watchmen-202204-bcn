@@ -9,7 +9,9 @@ const appReducer = (currentState, action) => {
   let newState;
   switch (action.type) {
     case renderingPaintingsTypes:
-      newState = [...action.paintings];
+      newState = {
+        paintings: action.paintings,
+      };
       break;
     case addPaintingsTypes:
       newState = {
@@ -18,7 +20,12 @@ const appReducer = (currentState, action) => {
       };
       break;
     case deletePaintingsTypes:
-      newState = currentState.filter((_, i) => i !== action.indexToRemove);
+      newState = {
+        ...currentState,
+        paintings: currentState.paintings.filter(
+          (_, i) => i !== action.indexToRemove
+        ),
+      };
       break;
     case editPaintingsTypes:
       newState = {

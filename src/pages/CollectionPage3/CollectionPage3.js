@@ -46,7 +46,7 @@ const StyledCollectionPage = styled.section`
 `;
 
 const CollectionPage3 = () => {
-  const { paintings } = useContext(PaintsContext);
+  const { paintingState } = useContext(PaintsContext);
   const { getApiData } = useFetch();
 
   useEffect(() => {
@@ -63,7 +63,7 @@ const CollectionPage3 = () => {
         paragraphText="Here you'll find our weekly collection of one of our three favourites artist. Take a look and surf to our amazing curated selection."
       />
       <NavLink to="/detail">
-        <PaintingComponent paintings={paintings} />
+        <PaintingComponent paintings={paintingState.paintings} />
       </NavLink>
       <div className="icon-container">
         <IconButtonComponent
