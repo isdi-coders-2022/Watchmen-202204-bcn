@@ -3,12 +3,13 @@ import { useLocation } from "react-router-dom";
 import DetailComponent from "../../components/DetailComponent/DetailComponent";
 import HeaderComponent from "../../components/HeaderComponent/HeaderComponent";
 import ImageIconComponent from "../../components/ImageIconComponent/ImageIconComponent";
+import LoadingComponent from "../../components/LoadingComponent/LoadingComponent";
 import { addPaintingsTypes } from "../../store/actions/AppActionsTypes";
 import PaintsContext from "../../store/contexts/paintsContext";
 import useFetch from "../../store/hooks/useFetch";
 
 const DetailPage = () => {
-  const { dispatch, paintings } = useContext(PaintsContext);
+  const { dispatch, paintingState } = useContext(PaintsContext);
   const { getApiDetailsData } = useFetch();
 
   const location = useLocation();
@@ -20,21 +21,27 @@ const DetailPage = () => {
   }, [getApiDetailsData, location.state.myState]);
 
   const addItem = () => {
-    const newPainting = paintings[0];
+    const newPainting = paintingState.painting;
 
     dispatch(addPaintingsTypes(newPainting));
   };
 
-  return (
+  if (paintingState.loading) {
+    return <LoadingComponent />;
+  }
+
+  return paintingState.painting ? (
     <>
       <HeaderComponent />
-      <DetailComponent paintings={paintings} />
+      <DetailComponent painting={paintingState.painting} />
       <ImageIconComponent
-        image={paintings[0].webImage.url}
-        description={paintings[0].description}
+        image={paintingState.painting.webImage.url}
+        description={paintingState.painting.description}
         onAddItem={addItem}
       />
     </>
+  ) : (
+    <p>No painting found.</p>
   );
 };
 

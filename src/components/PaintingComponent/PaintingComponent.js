@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const StyledPaintingComponent = styled.div`
   .painting {
@@ -51,16 +52,29 @@ const PaintingComponent = ({ paintings }) => {
       <StyledPaintingComponent>
         <ul className="painting">
           {paintings.map((_painting, index) => (
-            <li className="painting_list" key={paintings[index].id}>
-              <div className="painting_container">
-                <img
-                  className="painting_image"
-                  src={paintings[index].webImage.url}
-                  alt={paintings[index].title}
-                />
-                <p className="painting_text">{`${paintings[index].longTitle}`}</p>
-              </div>
-            </li>
+            <NavLink
+              to="/detail"
+              state={{ myState: paintings[index].objectNumber }}
+              key={`${paintings[index].longTitle}nav`}
+            >
+              <li className="painting_list" key={paintings[index].id}>
+                <div
+                  className="painting_container"
+                  key={`${paintings[index].longTitle}div`}
+                >
+                  <img
+                    className="painting_image"
+                    src={paintings[index].webImage.url}
+                    alt={paintings[index].title}
+                    key={`${paintings[index].longTitle}img`}
+                  />
+                  <p
+                    key={`${paintings[index].longTitle}p`}
+                    className="painting_text"
+                  >{`${paintings[index].longTitle}`}</p>
+                </div>
+              </li>
+            </NavLink>
           ))}
         </ul>
       </StyledPaintingComponent>

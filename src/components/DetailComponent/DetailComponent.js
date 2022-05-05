@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import detailData from "../../dataTest/detailData";
 
 const StyledDetailComponent = styled.section`
   text-align: left;
@@ -16,19 +15,18 @@ const StyledDetailComponent = styled.section`
   }
 `;
 
-const DetailComponent = () => {
+const DetailComponent = ({ painting }) => {
   return (
     <StyledDetailComponent>
-      <h2>{detailData[0].artObject.title}</h2>
-      <p>{detailData[0].artObject.dating.presentingDate}</p>
-      <h3>{detailData[0].artObject.principalMaker}</h3>
-      <p>{detailData[0].artObject.label.description}</p>
+      <h2>{painting.title}</h2>
+      <p>{painting.longTitle.slice(-4)}</p>
+      <h3>{painting.principalOrFirstMaker}</h3>
+      <p>{painting.plaqueDescriptionEnglish}</p>
       <h3>Artwork Details</h3>
       <ul>
-        <li>Medium: {detailData[0].artObject.physicalMedium}</li>
-        <li>Dimensions: {detailData[0].artObject.subTitle} </li>
-        <li>Classification: {detailData[0].artObject.objectTypes}</li>
-        <li>Credit Line: {detailData[0].artObject.acquisition.creditLine}</li>
+        <li>Medium: {painting.physicalMedium}</li>
+        <li>Dimensions: {painting.subTitle} </li>
+        <li>Classification: {painting.objectTypes}</li>
       </ul>
     </StyledDetailComponent>
   );
