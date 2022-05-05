@@ -6,10 +6,10 @@ import WelcomePage from "./pages/WelcomePage/WelcomePage";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import MyCollectionPage from "./pages/MyCollectionPage/MyCollectionPage";
 import PaintsProvider from "./store/providers/paintsProvider";
+import CollectionPage2 from "./pages/CollectionPage2/CollectionPage2";
+import CollectionPage3 from "./pages/CollectionPage3/CollectionPage3";
 
 function App() {
-
-  
   return (
     <div className="App">
       <PaintsProvider>
@@ -18,6 +18,8 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/welcome" element={<WelcomePage />} />
           <Route path="/rembrandtvanrijn" element={<CollectionPage />} />
+          <Route path="/johannesvermeer" element={<CollectionPage2 />} />
+          <Route path="/maartenvanheemskerck" element={<CollectionPage3 />} />
           <Route path="/detail" element={<DetailPage />} />
           <Route path="/mycollection" element={<MyCollectionPage />} />
         </Routes>

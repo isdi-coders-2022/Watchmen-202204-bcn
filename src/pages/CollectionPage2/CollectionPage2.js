@@ -41,12 +41,12 @@ const StyledCollectionPage = styled.section`
   }
 `;
 
-const CollectionPage = () => {
+const CollectionPage2 = () => {
   return (
     <StyledCollectionPage>
       <HeaderComponent />
       <InfoComponent
-        titleText={"Rembrandt van Rijn"}
+        titleText={"Johannes Vermeer"}
         paragraphText="Here you'll find our weekly collection of one of our three favourites artist. Take a look and surf to our amazing curated selection."
       />
       <NavLink to="/detail">
@@ -78,4 +78,4 @@ const CollectionPage = () => {
   );
 };
 
-export default CollectionPage;
+export default CollectionPage2;

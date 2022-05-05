@@ -71,7 +71,7 @@ const ListComponent = ({ _text, _image, description, action }) => {
                   alt={description}
                 />
               </div>
-              <h3 className="collection_text">Collection 1</h3>
+              <h3 className="collection_text">Rembrandt van Rijn</h3>
             </div>
           </li>
         </ul>
@@ -87,7 +87,7 @@ const ListComponent = ({ _text, _image, description, action }) => {
                   alt={description}
                 />
               </div>
-              <h3 className="collection_text">Collection 2</h3>
+              <h3 className="collection_text">Johannes Vermeer</h3>
             </div>
           </li>
         </ul>
@@ -103,7 +103,7 @@ const ListComponent = ({ _text, _image, description, action }) => {
                   alt={description}
                 />
               </div>
-              <h3 className="collection_text">Collection 3</h3>
+              <h3 className="collection_text">Maarten van Heemskerck</h3>
             </div>
           </li>
         </ul>

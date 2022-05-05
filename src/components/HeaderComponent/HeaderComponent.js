@@ -156,10 +156,10 @@ const HeaderComponent = () => {
             <NavLink to="/rembrandtvanrijn">Rembrandt van Rijn</NavLink>
           </li>
           <li>
-            <NavLink to="/rembrandtvanrijn">Rembrandt van Rijn</NavLink>
+            <NavLink to="/johannesvermeer">Johannes Vermeer</NavLink>
           </li>
           <li>
-            <NavLink to="/rembrandtvanrijn">Rembrandt van Rijn</NavLink>
+            <NavLink to="/maartenvanheemskerck">Maarten van Heemskerck</NavLink>
           </li>
           <li>
             <NavLink to="/mycollection">My Collection</NavLink>
