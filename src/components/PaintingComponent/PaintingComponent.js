@@ -46,25 +46,20 @@ const StyledPaintingComponent = styled.div`
   }
 `;
 
-const PaintingComponent = ({ action }) => {
+const PaintingComponent = ({ paintings }) => {
   return (
     <>
       <StyledPaintingComponent>
         <ul className="painting">
-          {paintingData[0].artObjects.map((_painting, index) => (
-            <li
-              className="painting_list"
-              key={paintingData[0].artObjects[index].id}
-            >
-              <div className="painting_container" onClick={action}>
+          {paintings.map((_painting, index) => (
+            <li className="painting_list" key={paintings[index].id}>
+              <div className="painting_container">
                 <img
                   className="painting_image"
-                  src={paintingData[0].artObjects[index].webImage.url}
-                  alt={paintingData[0].artObjects[index].title}
+                  src={paintings[index].webImage.url}
+                  alt={paintings[index].title}
                 />
-                <p className="painting_text">
-                  {`${paintingData[0].artObjects[index].longTitle}`}
-                </p>
+                <p className="painting_text">{`${paintings[index].longTitle}`}</p>
               </div>
             </li>
           ))}

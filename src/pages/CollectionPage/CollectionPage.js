@@ -8,6 +8,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import PaintingComponent from "../../components/PaintingComponent/PaintingComponent";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import PaintsContext from "../../store/contexts/paintsContext";
+import useFetch from "../../store/hooks/useFetch";
+import { useEffect } from "react";
 
 const StyledCollectionPage = styled.section`
   position: relative;
@@ -42,6 +46,13 @@ const StyledCollectionPage = styled.section`
 `;
 
 const CollectionPage = () => {
+  const { paintings } = useContext(PaintsContext);
+  const { getApiData } = useFetch();
+
+  useEffect(() => {
+    getApiData();
+  }, [getApiData]);
+
   return (
     <StyledCollectionPage>
       <HeaderComponent />
@@ -50,7 +61,7 @@ const CollectionPage = () => {
         paragraphText="Here you'll find our weekly collection of one of our three favourites artist. Take a look and surf to our amazing curated selection."
       />
       <NavLink to="/detail">
-        <PaintingComponent />
+        <PaintingComponent paintings={paintings} />
       </NavLink>
       <div className="icon-container">
         <IconButtonComponent
