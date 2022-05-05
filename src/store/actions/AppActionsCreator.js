@@ -2,8 +2,13 @@ import {
   addPaintingsTypes,
   deletePaintingsTypes,
   editPaintingsTypes,
+  fetchingPaintingsTypes,
   renderingPaintingsTypes,
 } from "./AppActionsTypes";
+
+export const fetchingPaintings = () => ({
+  type: fetchingPaintingsTypes,
+});
 
 export const renderingPaintings = (paintings) => ({
   type: renderingPaintingsTypes,

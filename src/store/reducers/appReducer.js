@@ -2,15 +2,24 @@ import {
   addPaintingsTypes,
   deletePaintingsTypes,
   editPaintingsTypes,
+  fetchingPaintingsTypes,
   renderingPaintingsTypes,
 } from "../actions/AppActionsTypes";
 
 const appReducer = (currentState, action) => {
   let newState;
   switch (action.type) {
+    case fetchingPaintingsTypes:
+      newState = {
+        ...currentState,
+        loading: true,
+      };
+      break;
     case renderingPaintingsTypes:
       newState = {
+        ...currentState,
         paintings: action.paintings,
+        loading: false,
       };
       break;
     case addPaintingsTypes:

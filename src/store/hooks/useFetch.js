@@ -1,7 +1,10 @@
 import { useCallback } from "react";
 import PaintsContext from "../contexts/paintsContext";
 import { useContext } from "react";
-import { renderingPaintings } from "../actions/AppActionsCreator";
+import {
+  fetchingPaintings,
+  renderingPaintings,
+} from "../actions/AppActionsCreator";
 
 const useFetch = () => {
   const { dispatch } = useContext(PaintsContext);
@@ -11,6 +14,7 @@ const useFetch = () => {
       if (url === undefined) {
       }
       (async () => {
+        dispatch(fetchingPaintings());
         const response = await fetch(url);
         const paintingsCollection = await response.json();
         dispatch(renderingPaintings(paintingsCollection.artObjects));
