@@ -2,45 +2,38 @@ import {
   addPaintingsTypes,
   deletePaintingsTypes,
   editPaintingsTypes,
-  fetchingPaintingsTypes,
   renderingPaintingsTypes,
 } from "../actions/AppActionsTypes";
 
 const appReducer = (currentState, action) => {
   let newState;
   switch (action.type) {
-    case fetchingPaintingsTypes:
-      newState = {
-        ...currentState,
-        loading: true,
-      };
-      break;
     case renderingPaintingsTypes:
-      newState = {
-        ...currentState,
-        paintings: action.paintings,
-        loading: false,
-      };
+      newState = [...action.paintings];
       break;
     case addPaintingsTypes:
-      newState = {
-        ...currentState,
-        painting: currentState.concat(action.paintings),
-      };
+      newState = [
+        {
+          ...currentState,
+          painting: currentState.concat(action),
+        },
+      ];
       break;
     case deletePaintingsTypes:
-      newState = {
-        ...currentState,
-        paintings: currentState.paintings.filter(
-          (_, i) => i !== action.indexToRemove
-        ),
-      };
+      newState = [
+        {
+          ...currentState,
+          painting: currentState.slice(0, action),
+        },
+      ];
       break;
     case editPaintingsTypes:
-      newState = {
-        ...currentState,
-        painting: "Here we'll be the editPaintinfFunction",
-      };
+      newState = [
+        {
+          ...currentState,
+          painting: "Here we'll be the editPaintinfFunction",
+        },
+      ];
       break;
     default:
       newState = [...currentState];
