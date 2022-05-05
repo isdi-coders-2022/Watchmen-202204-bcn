@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import paintingData from "../../dataTest/paintingData";
 
 const StyledPaintingComponent = styled.div`
   .painting {
