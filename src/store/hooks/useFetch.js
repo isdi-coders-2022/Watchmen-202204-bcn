@@ -1,7 +1,10 @@
 import { useCallback } from "react";
 import PaintsContext from "../contexts/paintsContext";
 import { useContext } from "react";
-import { renderingPaintings } from "../actions/AppActionsCreator";
+import {
+  renderingPaintings,
+  renderingDetailsPainting,
+} from "../actions/AppActionsCreator";
 
 const useFetch = () => {
   const { dispatch } = useContext(PaintsContext);
@@ -12,6 +15,7 @@ const useFetch = () => {
       }
       (async () => {
         const response = await fetch(url);
+
         const paintingsCollection = await response.json();
         dispatch(renderingPaintings(paintingsCollection.artObjects));
       })();
@@ -19,7 +23,21 @@ const useFetch = () => {
     [dispatch]
   );
 
-  return { getApiData };
+  const getApiDetailsData = useCallback(
+    (url) => {
+      if (url === undefined) {
+      }
+      (async () => {
+        const response = await fetch(url);
+
+        const paintingsCollection = await response.json();
+        dispatch(renderingDetailsPainting(paintingsCollection.artObject));
+      })();
+    },
+    [dispatch]
+  );
+
+  return { getApiData, getApiDetailsData };
 };
 
 export default useFetch;

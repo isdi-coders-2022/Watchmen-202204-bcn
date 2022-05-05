@@ -3,6 +3,7 @@ import {
   deletePaintingsTypes,
   editPaintingsTypes,
   renderingPaintingsTypes,
+  renderingDetailsPaintingTypes,
 } from "../actions/AppActionsTypes";
 
 const appReducer = (currentState, action) => {
@@ -10,6 +11,9 @@ const appReducer = (currentState, action) => {
   switch (action.type) {
     case renderingPaintingsTypes:
       newState = [...action.paintings];
+      break;
+    case renderingDetailsPaintingTypes:
+      newState = [{ ...action.paintings }];
       break;
     case addPaintingsTypes:
       newState = {

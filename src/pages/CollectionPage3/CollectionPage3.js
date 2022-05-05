@@ -7,7 +7,6 @@ import {
   faSquareCaretRight,
 } from "@fortawesome/free-solid-svg-icons";
 import PaintingComponent from "../../components/PaintingComponent/PaintingComponent";
-import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import PaintsContext from "../../store/contexts/paintsContext";
 import useFetch from "../../store/hooks/useFetch";
@@ -51,7 +50,7 @@ const CollectionPage3 = () => {
 
   useEffect(() => {
     getApiData(
-      "https://www.rijksmuseum.nl/api/en/collection/?key=jjq73gPu&format=json&involvedMaker=Maarten+van+Heemskerck&p=0&ps=3&imgonly=True&artist=relevance"
+      "https://www.rijksmuseum.nl/api/en/collection/?key=jjq73gPu&format=json&involvedMaker=Maarten+van+Heemskerck&p=0&ps=15&imgonly=True&artist=relevance"
     );
   }, [getApiData]);
 
@@ -62,9 +61,7 @@ const CollectionPage3 = () => {
         titleText={"Maarten van Heemskerck"}
         paragraphText="Here you'll find our weekly collection of one of our three favourites artist. Take a look and surf to our amazing curated selection."
       />
-      <NavLink to="/detail">
-        <PaintingComponent paintings={paintings} />
-      </NavLink>
+      <PaintingComponent paintings={paintings} />
       <div className="icon-container">
         <IconButtonComponent
           backgroundcolor="#fff"
