@@ -82,7 +82,7 @@ const ListComponent = ({ _text, _image, description, action }) => {
                 <img
                   className="collection_image"
                   src={
-                    "https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0"
+                    "https://lh3.googleusercontent.com/GQkZDpSbiMBU8tVbuYw_n8M4HOV5Q7ftA_ywibsh3718_ZrVPssGTtVC5spGM9OJyFOnoncB2u3I3DfuR_-9cdduDRMIbEN-Hzgf9AvDyA=w500"
                   }
                   alt={description}
                 />
@@ -98,7 +98,7 @@ const ListComponent = ({ _text, _image, description, action }) => {
                 <img
                   className="collection_image"
                   src={
-                    "https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0"
+                    "https://lh3.googleusercontent.com/4QGG5BGKXaVXzAMfbR-PdZp_9TW_dECAxqXQ-fZwaTxK43O-MRp-zadtiQem4xSr7H_leSg7AyOWZkpqjeF37rTobbo=w500"
                   }
                   alt={description}
                 />
