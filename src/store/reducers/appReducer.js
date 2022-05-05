@@ -18,10 +18,7 @@ const appReducer = (currentState, action) => {
       };
       break;
     case deletePaintingsTypes:
-      newState = {
-        ...currentState,
-        painting: currentState.slice(0, action.paintings),
-      };
+      newState = currentState.filter((_, i) => i !== action.indexToRemove);
       break;
     case editPaintingsTypes:
       newState = {

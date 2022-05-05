@@ -1,9 +1,9 @@
 import { faCircleXmark, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
 import styled from "styled-components";
-import {
-  deletePaintingsTypes,
-  editPaintingsTypes,
-} from "../../store/actions/AppActionsTypes";
+import { deletePaintings } from "../../store/actions/AppActionsCreator";
+import { editPaintingsTypes } from "../../store/actions/AppActionsTypes";
+import PaintsContext from "../../store/contexts/paintsContext";
 import IconButtonComponent from "../IconButtonComponent/IconButtonComponent";
 
 const StyledMyCollectionComponent = styled.div`
@@ -51,7 +51,9 @@ const StyledMyCollectionComponent = styled.div`
   }
 `;
 
-const MyCollectionComponent = ({ paintings, iconAction }) => {
+const MyCollectionComponent = ({ paintings }) => {
+  const { dispatch } = useContext(PaintsContext);
+
   return (
     <>
       <StyledMyCollectionComponent>
@@ -76,7 +78,7 @@ const MyCollectionComponent = ({ paintings, iconAction }) => {
                   />
                   <IconButtonComponent
                     divClassName="prova2"
-                    action={() => deletePaintingsTypes}
+                    action={() => dispatch(deletePaintings(index))}
                     backgroundcolor="#fff"
                     iconSize="50px"
                     iconClassName="painting_icon"

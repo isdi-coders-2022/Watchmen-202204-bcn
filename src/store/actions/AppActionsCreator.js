@@ -15,9 +15,9 @@ export const addPaintings = (painting) => ({
   painting,
 });
 
-export const deletePaintings = (painting) => ({
+export const deletePaintings = (indexToRemove) => ({
   type: deletePaintingsTypes,
-  painting,
+  indexToRemove,
 });
 
 export const editPaintings = (painting) => ({
