@@ -13,6 +13,7 @@ import { useContext } from "react";
 import PaintsContext from "../../store/contexts/paintsContext";
 import useFetch from "../../store/hooks/useFetch";
 import { useEffect } from "react";
+import MyCollectionComponent from "../../components/MyCollectionComponent/MyCollectionComponent";
 
 const StyledMyCollectionPage = styled.section`
   position: relative;
@@ -36,7 +37,8 @@ const StyledMyCollectionPage = styled.section`
     position: absolute;
     justify-content: space-around;
     width: 417.44px;
-    top: 15%;
+    margin-left: 20px;
+    top: 10%;
   }
 
   .prova {
@@ -76,7 +78,9 @@ const MyCollectionPage = (iconAction, action) => {
   const { getApiData } = useFetch();
 
   useEffect(() => {
-    getApiData();
+    getApiData(
+      "https://www.rijksmuseum.nl/api/en/collection/?key=jjq73gPu&format=json&involvedMaker=Rembrandt+van+Rijn&p=0&ps=3&imgonly=True&artist=relevance"
+    );
   }, [getApiData]);
 
   return (
@@ -88,25 +92,7 @@ const MyCollectionPage = (iconAction, action) => {
           paragraphText="Filter by presenting date"
         />
         <div className="image-container">
-          <PaintingComponent paintings={paintings} />
-          <div className="image-container-icons">
-            <IconButtonComponent
-              divClassName="prova"
-              action={() => iconAction}
-              backgroundcolor="#fff"
-              iconSize="50px"
-              iconClassName="painting_icon"
-              iconName={faUserCircle}
-            />
-            <IconButtonComponent
-              divClassName="prova2"
-              action={() => iconAction}
-              backgroundcolor="#fff"
-              iconSize="50px"
-              iconClassName="painting_icon"
-              iconName={faCircleXmark}
-            />
-          </div>
+          <MyCollectionComponent paintings={paintings} />
         </div>
         <div className="icon-container">
           <NavLink to="/form">

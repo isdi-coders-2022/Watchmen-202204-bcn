@@ -16,7 +16,7 @@ const StyledFormPage = styled.div`
     }
   }
   .painting_image {
-    height: 100vh;
+    height: 1000px;
     width: 100%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
