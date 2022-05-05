@@ -4,14 +4,17 @@ import {
   editPaintingsTypes,
 } from "./AppActionsTypes";
 
-export const addPaintings = () => ({
+export const addPaintings = (painting) => ({
   type: addPaintingsTypes.addPaintings,
+  painting,
 });
 
-export const deletePaintings = () => ({
+export const deletePaintings = (painting) => ({
   type: deletePaintingsTypes.deletePaintings,
+  painting,
 });
 
-export const editPaintings = () => ({
+export const editPaintings = (painting) => ({
   type: editPaintingsTypes.editPaintings,
+  painting,
 });
