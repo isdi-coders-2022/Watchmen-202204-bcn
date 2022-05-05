@@ -67,7 +67,7 @@ const StyledMyCollectionPage = styled.section`
   }
 `;
 
-const MyCollectionPage = (iconAction) => {
+const MyCollectionPage = (iconAction, action) => {
   return (
     <>
       <HeaderComponent />
@@ -81,7 +81,7 @@ const MyCollectionPage = (iconAction) => {
           <div className="image-container-icons">
             <IconButtonComponent
               divClassName="prova"
-              action={iconAction}
+              action={() => iconAction}
               backgroundcolor="#fff"
               iconSize="50px"
               iconClassName="painting_icon"
@@ -89,7 +89,7 @@ const MyCollectionPage = (iconAction) => {
             />
             <IconButtonComponent
               divClassName="prova2"
-              action={iconAction}
+              action={() => iconAction}
               backgroundcolor="#fff"
               iconSize="50px"
               iconClassName="painting_icon"
@@ -104,6 +104,7 @@ const MyCollectionPage = (iconAction) => {
               iconSize="50px"
               iconClassName="marginIcon"
               iconName={faCirclePlus}
+              action={() => action}
             />
           </NavLink>
         </div>
