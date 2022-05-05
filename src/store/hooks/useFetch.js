@@ -1,6 +1,5 @@
-import { useCallback } from "react";
+import { useCallback, useContext } from "react";
 import PaintsContext from "../contexts/paintsContext";
-import { useContext } from "react";
 import { renderingPaintings } from "../actions/AppActionsCreator";
 
 const useFetch = () => {
