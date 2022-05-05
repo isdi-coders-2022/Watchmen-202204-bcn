@@ -3,7 +3,7 @@ import PaintsContext from "../contexts/paintsContext";
 import appReducer from "../reducers/appReducer";
 
 const PaintsProvider = ({ children }) => {
-  const initialState = { paintings: [] };
+  const initialState = { paintings: [], loading: false };
   const [paintingState, dispatch] = useReducer(appReducer, initialState);
 
   return (

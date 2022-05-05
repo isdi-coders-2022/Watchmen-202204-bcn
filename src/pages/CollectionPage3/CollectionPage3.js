@@ -11,6 +11,7 @@ import { NavLink } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import PaintsContext from "../../store/contexts/paintsContext";
 import useFetch from "../../store/hooks/useFetch";
+import LoadingComponent from "../../components/LoadingComponent/LoadingComponent";
 
 const StyledCollectionPage = styled.section`
   position: relative;
@@ -53,6 +54,10 @@ const CollectionPage3 = () => {
       "https://www.rijksmuseum.nl/api/en/collection/?key=jjq73gPu&format=json&involvedMaker=Maarten+van+Heemskerck&p=0&ps=3&imgonly=True&artist=relevance"
     );
   }, [getApiData]);
+
+  if (paintingState.loading) {
+    return <LoadingComponent />;
+  }
 
   return (
     <StyledCollectionPage>
