@@ -50,7 +50,9 @@ const CollectionPage = () => {
   const { getApiData } = useFetch();
 
   useEffect(() => {
-    getApiData();
+    getApiData(
+      "https://www.rijksmuseum.nl/api/en/collection/?key=jjq73gPu&format=json&involvedMaker=Rembrandt+van+Rijn&p=0&ps=3&imgonly=True&artist=relevance"
+    );
   }, [getApiData]);
 
   return (

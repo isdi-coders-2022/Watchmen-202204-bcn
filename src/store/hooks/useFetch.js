@@ -8,8 +8,6 @@ const useFetch = () => {
 
   const getApiData = useCallback(
     (url) => {
-      url =
-        "https://www.rijksmuseum.nl/api/en/collection/?key=jjq73gPu&format=json&involvedMaker=Rembrandt+van+Rijn&p=0&ps=15&imgonly=True&artist=relevance";
       if (url === undefined) {
       }
       (async () => {
