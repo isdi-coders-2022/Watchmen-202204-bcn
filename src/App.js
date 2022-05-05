@@ -8,6 +8,7 @@ import MyCollectionPage from "./pages/MyCollectionPage/MyCollectionPage";
 import PaintsProvider from "./store/providers/paintsProvider";
 import CollectionPage2 from "./pages/CollectionPage2/CollectionPage2";
 import CollectionPage3 from "./pages/CollectionPage3/CollectionPage3";
+import FormPage from "./pages/FormPage/FormPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/maartenvanheemskerck" element={<CollectionPage3 />} />
           <Route path="/detail" element={<DetailPage />} />
           <Route path="/mycollection" element={<MyCollectionPage />} />
+          <Route path="/form" element={<FormPage />} />
         </Routes>
       </PaintsProvider>
     </div>

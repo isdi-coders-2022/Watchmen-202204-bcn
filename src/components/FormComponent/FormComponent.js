@@ -15,7 +15,7 @@ const StyledFormComponent = styled.section`
 
   .formContainer {
     position: relative;
-    height: 100vh;
+    height: 1000px;
   }
 
   .painting_image {
