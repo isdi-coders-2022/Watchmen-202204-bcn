@@ -1,5 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import MyCollectionPage from "./MyCollectionPage";
+import { setupWorker, rest } from "msw";
+import PaintsProvider from "../../store/providers/paintsProvider";
 const { render, screen } = require("@testing-library/react");
 
 describe("Given a MyCollectionPage Component", () => {
@@ -7,7 +9,9 @@ describe("Given a MyCollectionPage Component", () => {
     test("Then it should render a button 'Circle Up' with'", () => {
       render(
         <BrowserRouter>
-          <MyCollectionPage />
+          <PaintsProvider>
+            <MyCollectionPage />
+          </PaintsProvider>
         </BrowserRouter>
       );
 

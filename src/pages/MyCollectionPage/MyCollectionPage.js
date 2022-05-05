@@ -9,6 +9,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import PaintingComponent from "../../components/PaintingComponent/PaintingComponent";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import PaintsContext from "../../store/contexts/paintsContext";
+import useFetch from "../../store/hooks/useFetch";
+import { useEffect } from "react";
 
 const StyledMyCollectionPage = styled.section`
   position: relative;
@@ -68,6 +72,13 @@ const StyledMyCollectionPage = styled.section`
 `;
 
 const MyCollectionPage = (iconAction, action) => {
+  const { paintings } = useContext(PaintsContext);
+  const { getApiData } = useFetch();
+
+  useEffect(() => {
+    getApiData();
+  }, [getApiData]);
+
   return (
     <>
       <HeaderComponent />
@@ -77,7 +88,7 @@ const MyCollectionPage = (iconAction, action) => {
           paragraphText="Filter by presenting date"
         />
         <div className="image-container">
-          <PaintingComponent />
+          <PaintingComponent paintings={paintings} />
           <div className="image-container-icons">
             <IconButtonComponent
               divClassName="prova"
