@@ -4,7 +4,7 @@ import DetailComponent from "../../components/DetailComponent/DetailComponent";
 import HeaderComponent from "../../components/HeaderComponent/HeaderComponent";
 import ImageIconComponent from "../../components/ImageIconComponent/ImageIconComponent";
 import LoadingComponent from "../../components/LoadingComponent/LoadingComponent";
-import { addPaintingsTypes } from "../../store/actions/AppActionsTypes";
+import { addPaintings } from "../../store/actions/AppActionsCreator";
 import PaintsContext from "../../store/contexts/paintsContext";
 import useFetch from "../../store/hooks/useFetch";
 
@@ -20,12 +20,6 @@ const DetailPage = () => {
     );
   }, [getApiDetailsData, location.state.myState]);
 
-  const addItem = () => {
-    const newPainting = paintingState.painting;
-
-    dispatch(addPaintingsTypes(newPainting));
-  };
-
   if (paintingState.loading) {
     return <LoadingComponent />;
   }
@@ -37,7 +31,7 @@ const DetailPage = () => {
       <ImageIconComponent
         image={paintingState.painting.webImage.url}
         description={paintingState.painting.description}
-        onAddItem={addItem}
+        onAddItem={() => dispatch(addPaintings(paintingState.painting))}
       />
     </>
   ) : (
