@@ -10,7 +10,7 @@ const StyledImageIconComponent = styled.div`
   padding: 0 1.2em 1.2em;
   position: relative;
   .painting_image {
-    width: 100vw;
+    width: 425px;
     height: 465px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 40px;
