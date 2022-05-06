@@ -79,7 +79,7 @@ const ListComponent = ({ _text, _image, description, action }) => {
           </NavLink>
         </ul>
         <ul className="collection">
-          <NavLink to="/rembrandtvanrijn">
+          <NavLink to="/johannesvermeer">
             <li className="collection_list">
               <div className="collection_container" onClick={action}>
                 <div className="collection_image--overlay">
@@ -97,7 +97,7 @@ const ListComponent = ({ _text, _image, description, action }) => {
           </NavLink>
         </ul>
         <ul className="collection">
-          <NavLink to="/rembrandtvanrijn">
+          <NavLink to="/maartenvanheemskerck">
             <li className="collection_list">
               <div className="collection_container" onClick={action}>
                 <div className="collection_image--overlay">
