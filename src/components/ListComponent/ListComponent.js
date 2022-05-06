@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const StyledListComponent = styled.div`
   .collection {
@@ -60,52 +61,58 @@ const ListComponent = ({ _text, _image, description, action }) => {
     <>
       <StyledListComponent>
         <ul className="collection">
-          <li className="collection_list">
-            <div className="collection_container" onClick={action}>
-              <div className="collection_image--overlay">
-                <img
-                  className="collection_image"
-                  src={
-                    "https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0"
-                  }
-                  alt={description}
-                />
+          <NavLink to="/rembrandtvanrijn">
+            <li className="collection_list">
+              <div className="collection_container" onClick={action}>
+                <div className="collection_image--overlay">
+                  <img
+                    className="collection_image"
+                    src={
+                      "https://lh3.googleusercontent.com/AyiKhdEWJ7XmtPXQbRg_kWqKn6mCV07bsuUB01hJHjVVP-ZQFmzjTWt7JIWiQFZbb9l5tKFhVOspmco4lMwqwWImfgg=s0"
+                    }
+                    alt={description}
+                  />
+                </div>
+                <h3 className="collection_text">Rembrandt van Rijn</h3>
               </div>
-              <h3 className="collection_text">Rembrandt van Rijn</h3>
-            </div>
-          </li>
+            </li>
+          </NavLink>
         </ul>
         <ul className="collection">
-          <li className="collection_list">
-            <div className="collection_container" onClick={action}>
-              <div className="collection_image--overlay">
-                <img
-                  className="collection_image"
-                  src={
-                    "https://lh3.googleusercontent.com/GQkZDpSbiMBU8tVbuYw_n8M4HOV5Q7ftA_ywibsh3718_ZrVPssGTtVC5spGM9OJyFOnoncB2u3I3DfuR_-9cdduDRMIbEN-Hzgf9AvDyA=w500"
-                  }
-                  alt={description}
-                />
+          <NavLink to="/rembrandtvanrijn">
+            <li className="collection_list">
+              <div className="collection_container" onClick={action}>
+                <div className="collection_image--overlay">
+                  <img
+                    className="collection_image"
+                    src={
+                      "https://lh3.googleusercontent.com/GQkZDpSbiMBU8tVbuYw_n8M4HOV5Q7ftA_ywibsh3718_ZrVPssGTtVC5spGM9OJyFOnoncB2u3I3DfuR_-9cdduDRMIbEN-Hzgf9AvDyA=w500"
+                    }
+                    alt={description}
+                  />
+                </div>
+                <h3 className="collection_text">Johannes Vermeer</h3>
               </div>
-              <h3 className="collection_text">Johannes Vermeer</h3>
-            </div>
-          </li>
+            </li>
+          </NavLink>
         </ul>
         <ul className="collection">
-          <li className="collection_list">
-            <div className="collection_container" onClick={action}>
-              <div className="collection_image--overlay">
-                <img
-                  className="collection_image"
-                  src={
-                    "https://lh3.googleusercontent.com/4QGG5BGKXaVXzAMfbR-PdZp_9TW_dECAxqXQ-fZwaTxK43O-MRp-zadtiQem4xSr7H_leSg7AyOWZkpqjeF37rTobbo=w500"
-                  }
-                  alt={description}
-                />
+          <NavLink to="/rembrandtvanrijn">
+            <li className="collection_list">
+              <div className="collection_container" onClick={action}>
+                <div className="collection_image--overlay">
+                  <img
+                    className="collection_image"
+                    src={
+                      "https://lh3.googleusercontent.com/4QGG5BGKXaVXzAMfbR-PdZp_9TW_dECAxqXQ-fZwaTxK43O-MRp-zadtiQem4xSr7H_leSg7AyOWZkpqjeF37rTobbo=w500"
+                    }
+                    alt={description}
+                  />
+                </div>
+                <h3 className="collection_text">Maarten van Heemskerck</h3>
               </div>
-              <h3 className="collection_text">Maarten van Heemskerck</h3>
-            </div>
-          </li>
+            </li>
+          </NavLink>
         </ul>
       </StyledListComponent>
     </>

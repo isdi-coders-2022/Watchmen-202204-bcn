@@ -2,7 +2,6 @@ import HeaderComponent from "../../components/HeaderComponent/HeaderComponent";
 import InfoComponent from "../../components/InfoComponent/InfoComponent";
 import ListComponent from "../../components/ListComponent/ListComponent";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 
 const StyledWelcomePage = styled.section`
   h2 {
@@ -22,9 +21,7 @@ const WelcomePage = () => {
         titleText="WELCOME TO OUR GALLERY"
         paragraphText="Here you'll find our weekly collection of our three favourites artist. Take a look and surf to our amazing curated selection."
       />
-      <NavLink to="/rembrandtvanrijn">
-        <ListComponent />
-      </NavLink>
+      <ListComponent />
     </StyledWelcomePage>
   );
 };
