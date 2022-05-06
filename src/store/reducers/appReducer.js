@@ -3,6 +3,7 @@ import {
   deletePaintingsTypes,
   editPaintingsTypes,
   fetchingPaintingsTypes,
+  renderingDetailsPaintingTypes,
   renderingPaintingsTypes,
 } from "../actions/AppActionsTypes";
 
@@ -25,7 +26,7 @@ const appReducer = (currentState, action) => {
     case addPaintingsTypes:
       newState = {
         ...currentState,
-        painting: currentState.concat(action.paintings),
+        paintings: currentState.paintings.concat(action.newPainting),
       };
       break;
     case deletePaintingsTypes:
@@ -36,6 +37,13 @@ const appReducer = (currentState, action) => {
         ),
       };
       break;
+    case renderingDetailsPaintingTypes:
+      newState = {
+        ...currentState,
+        painting: action.painting,
+        loading: false,
+      };
+      break;
     case editPaintingsTypes:
       newState = {
         ...currentState,
@@ -43,7 +51,9 @@ const appReducer = (currentState, action) => {
       };
       break;
     default:
-      newState = [...currentState];
+      newState = {
+        ...currentState,
+      };
   }
   return newState;
 };

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import IconButtonComponent from "../IconButtonComponent/IconButtonComponent";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-import { addPaintingsTypes } from "../../store/actions/AppActionsTypes";
 
 const StyledImageIconComponent = styled.div`
   display: flex;
@@ -32,14 +31,19 @@ const StyledImageIconComponent = styled.div`
   }
 `;
 
-const ImageIconComponent = ({ image, description, divClassName }) => {
+const ImageIconComponent = ({
+  image,
+  description,
+  divClassName,
+  onAddItem,
+}) => {
   return (
     <StyledImageIconComponent>
       <img className="painting_image" src={image} alt={description} />
       <div className="painting_actions">
         <IconButtonComponent
           divClassName={divClassName}
-          action={() => addPaintingsTypes}
+          action={onAddItem}
           backgroundcolor="#fff"
           iconSize="50px"
           iconClassName="painting_icon"
