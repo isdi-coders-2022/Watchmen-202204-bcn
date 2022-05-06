@@ -3,6 +3,7 @@ import styled from "styled-components";
 const StyledDetailComponent = styled.section`
   text-align: left;
   padding: 1.2em;
+  margin: 1.2em;
 
   ul {
     list-style: none;
