@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a Detail Component When it's rendered Then it should always match this snaptshot' 1`] = `
+<section
+  className="sc-bczRLJ hObVTd"
+>
+  <h2
+    data-testid="custom-element"
+  >
+    Portrait of a Woman, Possibly Maria Trip
+  </h2>
+  <p>
+    1639
+  </p>
+  <h3>
+    Rembrandt van Rijn
+  </h3>
+  <p>
+    Maria Trip, daughter of one of Amsterdam’s wealthiest merchants, was twenty when Rembrandt painted her portrait. The artist placed Maria against a stone arch and devoted particular attention to the reflected light, the fashionable dress and jewellery. The costly garments are trimmed with strips of gold lace and Maria is wearing a profusion of pearls.
+  </p>
+  <h3>
+    Artwork Details
+  </h3>
+  <ul>
+    <li>
+      Medium: 
+      oil on panel
+    </li>
+    <li>
+      Dimensions: 
+      h 107cm × w 82cm
+       
+    </li>
+    <li>
+      Classification: 
+      painting
+    </li>
+  </ul>
+</section>
+`;
