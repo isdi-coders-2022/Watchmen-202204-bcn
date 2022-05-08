@@ -141,7 +141,7 @@ const HeaderComponent = () => {
       <nav className="top-nav">
         <div className="top-nav_img">
           <NavLink to="/home">
-            <img src="images/homepagelogo.svg" alt="WeekArtLogo" />
+            <img src="/images/homepagelogo.svg" alt="WeekArtLogo" />
           </NavLink>
         </div>
         <input id="menu-toggle" type="checkbox" htmlFor="menu-toggle" />
