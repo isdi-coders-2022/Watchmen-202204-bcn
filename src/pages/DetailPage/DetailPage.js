@@ -16,9 +16,11 @@ const DetailPage = () => {
 
   useEffect(() => {
     getApiDetailsData(
-      `https://www.rijksmuseum.nl/api/en/collection/${location.state.myState}?key=jjq73gPu`
+      `https://www.rijksmuseum.nl/api/en/collection/${location.pathname.slice(
+        8
+      )}?key=jjq73gPu`
     );
-  }, [getApiDetailsData, location.state.myState]);
+  }, [getApiDetailsData, location.pathname]);
 
   if (paintingState.loading) {
     return <LoadingComponent />;

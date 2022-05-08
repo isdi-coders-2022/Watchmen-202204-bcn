@@ -1,5 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
 const { render, screen } = require("@testing-library/react");
+const {
+  default: PaintsProvider,
+} = require("../../store/providers/paintsProvider");
 const { default: PaintingComponent } = require("./PaintingComponent");
 
 describe("Given a PaintingComponent Component", () => {

@@ -19,7 +19,7 @@ const StyledDetailComponent = styled.section`
 const DetailComponent = ({ painting }) => {
   return (
     <StyledDetailComponent>
-      <h2 data-testid="custom-element">{painting.title}</h2>
+      <h2>{painting.title}</h2>
       <p>{painting.longTitle.slice(-4)}</p>
       <h3>{painting.principalOrFirstMaker}</h3>
       <p>{painting.plaqueDescriptionEnglish}</p>

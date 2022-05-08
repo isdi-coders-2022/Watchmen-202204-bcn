@@ -4,9 +4,7 @@ exports[`Given a Detail Component When it's rendered Then it should always match
 <section
   className="sc-bczRLJ hObVTd"
 >
-  <h2
-    data-testid="custom-element"
-  >
+  <h2>
     Portrait of a Woman, Possibly Maria Trip
   </h2>
   <p>
