@@ -3,6 +3,8 @@ import {
   renderingDetailsPaintingTypes,
 } from "../actions/AppActionsTypes";
 import appReducer from "./appReducer";
+import addPaintings from "../actions/AppActionsCreator";
+import deletePaintings from "../actions/AppActionsCreator";
 
 describe("Given an AppReducer function", () => {
   describe("When it receives an object with a painting information and an action to render", () => {
@@ -99,6 +101,44 @@ describe("Given an AppReducer function", () => {
       const creatingDetails = appReducer(paintingDetails, actionType);
 
       expect(creatingDetails).toEqual(expectedPaintingDetailsObject);
+    });
+  });
+
+  describe("Given a appReducer function", () => {
+    describe("When it's", () => {
+      test("Then it should return an array", () => {
+        const paintings = { 0: 1, 1: 2, 2: 3 };
+
+        const action = [
+          {
+            type: addPaintings,
+            paintings: paintings,
+          },
+        ];
+
+        const resultReduce = appReducer(paintings, action);
+        const expectResult = { 0: 1, 1: 2, 2: 3 };
+
+        expect(resultReduce).toEqual(expectResult);
+      });
+    });
+
+    describe("When its's", () => {
+      test("Then it should return an array", () => {
+        const paintings = { 0: 11, 1: 22, 2: 33 };
+
+        const action = [
+          {
+            type: deletePaintings,
+            paintings: paintings,
+          },
+        ];
+        const resultReduce = appReducer(paintings, action);
+
+        const expectResult = { 0: 11, 1: 22, 2: 33 };
+
+        expect(resultReduce).toEqual(expectResult);
+      });
     });
   });
 });
