@@ -33,8 +33,13 @@ const appReducer = (currentState, action) => {
       newState = {
         ...currentState,
         paintings: currentState.paintings.filter(
-          (_, i) => i !== action.indexToRemove
+          (_, index) => index !== action.indexToRemove
         ),
+      };
+      break;
+    case editPaintingsTypes:
+      newState = {
+        ...currentState,
       };
       break;
     case renderingDetailsPaintingTypes:
@@ -42,12 +47,6 @@ const appReducer = (currentState, action) => {
         ...currentState,
         painting: action.painting,
         loading: false,
-      };
-      break;
-    case editPaintingsTypes:
-      newState = {
-        ...currentState,
-        painting: "Here we'll be the editPaintinfFunction",
       };
       break;
     default:
