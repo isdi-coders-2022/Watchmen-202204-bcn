@@ -1,7 +1,6 @@
 import {
   addPaintingsTypes,
   deletePaintingsTypes,
-  editPaintingsTypes,
   fetchingPaintingsTypes,
   renderingPaintingsTypes,
   renderingDetailsPaintingTypes,
@@ -29,9 +28,4 @@ export const renderingDetailsPainting = (painting) => ({
 export const deletePaintings = (indexToRemove) => ({
   type: deletePaintingsTypes,
   indexToRemove,
-});
-
-export const editPaintings = (painting) => ({
-  type: editPaintingsTypes,
-  painting,
 });

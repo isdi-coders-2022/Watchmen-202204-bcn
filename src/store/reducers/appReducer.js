@@ -1,7 +1,6 @@
 import {
   addPaintingsTypes,
   deletePaintingsTypes,
-  editPaintingsTypes,
   fetchingPaintingsTypes,
   renderingDetailsPaintingTypes,
   renderingPaintingsTypes,
@@ -35,11 +34,6 @@ const appReducer = (currentState, action) => {
         paintings: currentState.paintings.filter(
           (_, index) => index !== action.indexToRemove
         ),
-      };
-      break;
-    case editPaintingsTypes:
-      newState = {
-        ...currentState,
       };
       break;
     case renderingDetailsPaintingTypes:
