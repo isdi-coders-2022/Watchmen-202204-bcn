@@ -37,17 +37,3 @@ describe("Given a deletePaintings function", () => {
     });
   });
 });
-
-describe("Given a editPaintings function", () => {
-  describe("When it's called", () => {
-    test("Then it should return an object", () => {
-      const expectedResult = {
-        type: editPaintingsTypes,
-      };
-
-      const receivedResult = editPaintings();
-
-      expect(receivedResult).toEqual(expectedResult);
-    });
-  });
-});
