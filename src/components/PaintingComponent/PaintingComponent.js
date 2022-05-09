@@ -55,21 +55,24 @@ const PaintingComponent = ({ paintings }) => {
             <NavLink
               to={`/detail/${paintings[index].objectNumber}`}
               state={{ myState: paintings[index].objectNumber }}
-              key={`${paintings[index].longTitle}nav`}
+              key={`${paintings[index].longTitle}nav&${[index]}`}
             >
-              <li className="painting_list" key={paintings[index].id}>
+              <li
+                className="painting_list"
+                key={`${paintings[index].id}art&${[index]}`}
+              >
                 <div
                   className="painting_container"
-                  key={`${paintings[index].longTitle}div`}
+                  key={`${paintings[index].longTitle}div&${[index]}`}
                 >
                   <img
                     className="painting_image"
                     src={paintings[index].webImage.url}
                     alt={paintings[index].title}
-                    key={`${paintings[index].longTitle}img`}
+                    key={`${paintings[index].longTitle}img&${[index]}`}
                   />
                   <p
-                    key={`${paintings[index].longTitle}p`}
+                    key={`${paintings[index].longTitle}p&${[index]}`}
                     className="painting_text"
                   >{`${paintings[index].longTitle}`}</p>
                 </div>
