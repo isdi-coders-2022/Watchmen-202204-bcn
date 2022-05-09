@@ -49,7 +49,7 @@ const useFetch = () => {
   );
 
   const userCreatedPainting = useCallback(async (userPainting) => {
-    const userCreatedPainting = {
+    const userUploadedPainting = {
       ...userPainting,
       id: userPainting.paintingId,
     };
@@ -58,7 +58,7 @@ const useFetch = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(userCreatedPainting),
+      body: JSON.stringify(userUploadedPainting),
     });
   }, []);
 

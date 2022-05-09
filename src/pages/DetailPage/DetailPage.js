@@ -8,7 +8,7 @@ import { addPaintings } from "../../store/actions/AppActionsCreator";
 import PaintsContext from "../../store/contexts/paintsContext";
 import useFetch from "../../store/hooks/useFetch";
 
-const DetailPage = (painting) => {
+const DetailPage = () => {
   const { dispatch, paintingState } = useContext(PaintsContext);
   const { getApiDetailsData } = useFetch();
   const location = useLocation();
@@ -36,7 +36,7 @@ const DetailPage = (painting) => {
       <ImageIconComponent
         image={paintingState.painting.webImage.url}
         description={paintingState.painting.description}
-        onAddItem={() => dispatchPainting(paintingState.painting)}
+        onAddItem={() => dispatchPainting()}
       />
     </>
   ) : (
