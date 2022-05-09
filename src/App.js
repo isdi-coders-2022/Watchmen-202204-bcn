@@ -21,7 +21,7 @@ function App() {
           <Route path="/rembrandtvanrijn" element={<CollectionPage />} />
           <Route path="/johannesvermeer" element={<CollectionPage2 />} />
           <Route path="/maartenvanheemskerck" element={<CollectionPage3 />} />
-          <Route path="/detail" element={<DetailPage />} />
+          <Route path="/detail/:id" element={<DetailPage />} />
           <Route path="/mycollection" element={<MyCollectionPage />} />
           <Route path="/form" element={<FormPage />} />
         </Routes>

@@ -8,6 +8,7 @@ import { useContext, useEffect } from "react";
 import PaintsContext from "../../store/contexts/paintsContext";
 import useFetch from "../../store/hooks/useFetch";
 import MyCollectionComponent from "../../components/MyCollectionComponent/MyCollectionComponent";
+import LoadingComponent from "../../components/LoadingComponent/LoadingComponent";
 
 const StyledMyCollectionPage = styled.section`
   position: relative;
@@ -69,13 +70,15 @@ const StyledMyCollectionPage = styled.section`
 
 const MyCollectionPage = (action) => {
   const { paintingState } = useContext(PaintsContext);
-  const { getApiData } = useFetch();
+  const { getMyApiDetails } = useFetch();
 
   useEffect(() => {
-    getApiData(
-      "https://www.rijksmuseum.nl/api/en/collection/?key=jjq73gPu&format=json&involvedMaker=Rembrandt+van+Rijn&p=0&ps=3&imgonly=True&artist=relevance"
-    );
-  }, [getApiData]);
+    getMyApiDetails("https://weekartapi.onrender.com/paintings/");
+  }, [getMyApiDetails]);
+
+  if (paintingState.loading) {
+    return <LoadingComponent />;
+  }
 
   return (
     <>
@@ -91,7 +94,7 @@ const MyCollectionPage = (action) => {
         <div className="icon-container">
           <NavLink to="/form">
             <IconButtonComponent
-              backgroundcolor="#fff"
+              backgroundcolor="#000"
               iconSize="50px"
               iconClassName="marginIcon"
               iconName={faCirclePlus}

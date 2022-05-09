@@ -8,17 +8,22 @@ import { addPaintings } from "../../store/actions/AppActionsCreator";
 import PaintsContext from "../../store/contexts/paintsContext";
 import useFetch from "../../store/hooks/useFetch";
 
-const DetailPage = () => {
+const DetailPage = (painting) => {
   const { dispatch, paintingState } = useContext(PaintsContext);
   const { getApiDetailsData } = useFetch();
-
   const location = useLocation();
 
   useEffect(() => {
     getApiDetailsData(
-      `https://www.rijksmuseum.nl/api/en/collection/${location.state.myState}?key=jjq73gPu`
+      `https://www.rijksmuseum.nl/api/en/collection/${location.pathname.slice(
+        8
+      )}?key=jjq73gPu`
     );
-  }, [getApiDetailsData, location.state.myState]);
+  }, [getApiDetailsData, location.pathname]);
+
+  const dispatchPainting = () => {
+    dispatch(addPaintings(paintingState.painting));
+  };
 
   if (paintingState.loading) {
     return <LoadingComponent />;
@@ -31,7 +36,7 @@ const DetailPage = () => {
       <ImageIconComponent
         image={paintingState.painting.webImage.url}
         description={paintingState.painting.description}
-        onAddItem={() => dispatch(addPaintings(paintingState.painting))}
+        onAddItem={() => dispatchPainting(paintingState.painting)}
       />
     </>
   ) : (

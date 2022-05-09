@@ -53,7 +53,7 @@ const PaintingComponent = ({ paintings }) => {
         <ul className="painting">
           {paintings.map((_painting, index) => (
             <NavLink
-              to="/detail"
+              to={`/detail/${paintings[index].objectNumber}`}
               state={{ myState: paintings[index].objectNumber }}
               key={`${paintings[index].longTitle}nav`}
             >
