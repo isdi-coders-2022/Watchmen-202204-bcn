@@ -2,12 +2,14 @@ import {
   addPaintings,
   deletePaintings,
   editPaintings,
+  fetchingPaintings,
 } from "./AppActionsCreator";
 
 import {
   addPaintingsTypes,
   deletePaintingsTypes,
   editPaintingsTypes,
+  fetchingPaintingsTypes,
 } from "./AppActionsTypes";
 
 describe("Given a addPaintings function", () => {
@@ -46,6 +48,20 @@ describe("Given a editPaintings function", () => {
       };
 
       const receivedResult = editPaintings();
+
+      expect(receivedResult).toEqual(expectedResult);
+    });
+  });
+});
+
+describe("Given a fetchingPaintings function", () => {
+  describe("When it's called", () => {
+    test("Then it should return an object", () => {
+      const expectedResult = {
+        type: fetchingPaintingsTypes,
+      };
+
+      const receivedResult = fetchingPaintings();
 
       expect(receivedResult).toEqual(expectedResult);
     });

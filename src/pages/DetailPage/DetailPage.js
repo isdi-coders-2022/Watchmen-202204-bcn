@@ -8,10 +8,9 @@ import { addPaintings } from "../../store/actions/AppActionsCreator";
 import PaintsContext from "../../store/contexts/paintsContext";
 import useFetch from "../../store/hooks/useFetch";
 
-const DetailPage = () => {
+const DetailPage = (painting) => {
   const { dispatch, paintingState } = useContext(PaintsContext);
   const { getApiDetailsData } = useFetch();
-
   const location = useLocation();
 
   useEffect(() => {
@@ -21,6 +20,10 @@ const DetailPage = () => {
       )}?key=jjq73gPu`
     );
   }, [getApiDetailsData, location.pathname]);
+
+  const dispatchPainting = () => {
+    dispatch(addPaintings(paintingState.painting));
+  };
 
   if (paintingState.loading) {
     return <LoadingComponent />;
@@ -33,7 +36,7 @@ const DetailPage = () => {
       <ImageIconComponent
         image={paintingState.painting.webImage.url}
         description={paintingState.painting.description}
-        onAddItem={() => dispatch(addPaintings(paintingState.painting))}
+        onAddItem={() => dispatchPainting(paintingState.painting)}
       />
     </>
   ) : (

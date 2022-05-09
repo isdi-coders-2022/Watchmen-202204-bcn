@@ -64,7 +64,7 @@ const MyCollectionComponent = ({ paintings }) => {
                   <img
                     className="painting_image"
                     src={paintings[index].webImage.url}
-                    alt={paintings[index].title}
+                    alt={paintings[index].longTitle}
                   />
                   <p className="painting_text">{`${paintings[index].longTitle}`}</p>
                   <div className="image-container-icons">
