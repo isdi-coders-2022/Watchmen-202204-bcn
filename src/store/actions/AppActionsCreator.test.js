@@ -40,6 +40,7 @@ describe("Given a deletePaintings function", () => {
   });
 });
 
+
 describe("Given a editPaintings function", () => {
   describe("When it's called", () => {
     test("Then it should return an object", () => {
@@ -67,3 +68,4 @@ describe("Given a fetchingPaintings function", () => {
     });
   });
 });
+
